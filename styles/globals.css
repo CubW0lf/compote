@@ -12,15 +12,13 @@
 /* Variables */
 
 :root {
-  --white: #ffffff;
-  --text: #000000;
-  --grey: #ececec;
-  --body: #59C579;
-  --body2: #E0AA63;
-  --primary: #F9BC6E;
-  --success: #42db8c;
-  --error: #ff614d;
-  --info: #B9E8FF;
+  --primary: #6BC1B9;
+  --highlight: #F29A77;
+  --dark: #353535;
+  --body: #FFFFFF;
+  --success: #4CEA9A;
+  --error: #E8544D;
+  --info: #ABDBD6;
   --font: 'Nunito', sans-serif;
   --titleFont: 'Lexend Deca', sans-serif;
 }
@@ -91,6 +89,10 @@ li {
 
 /* 3 Block */
 
+main {
+  padding: 2vw;
+}
+
 /* 4 inline */
 
 a {
@@ -106,7 +108,7 @@ li {
 }
 
 h1 {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 30px;
   line-height: 115.7%;
   font-family: var(--titleFont);
@@ -114,7 +116,7 @@ h1 {
 }
 
 h2 {
-  color: var(--text);
+  color: var(--dark);
   font-family: var(--titleFont);
   font-size: 5vw;
   line-height: 137.72%;
@@ -122,7 +124,7 @@ h2 {
 }
 
 h3 {
-  color: var(--secondary);
+  color: var(--dark);
   font-family: var(--titleFont);
   font-size: 10vw;
 }
@@ -157,7 +159,7 @@ select:focus,
 select:active,
 textarea:focus,
 textarea:active {
-  color: var(--text);
+  color: var(--dark);
   outline: none !important;
 }
 
@@ -169,7 +171,7 @@ textarea:active {
 }
 
 .success {
-  background-color: var(--valid);
+  background-color: var(--success);
 }
 
 @media screen and (min-width:1200px) {
@@ -180,14 +182,12 @@ textarea:active {
   }
 
   h1 {
-    font-size: 76px;
+    font-size: 50px;
     font-weight: 800;
-    margin-bottom: 35px;
   }
 
   h2 {
-    font-size: 52px;
-    line-height: 137.72%;
+    font-size: 40px;
     font-weight: 800;
   }
 

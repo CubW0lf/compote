@@ -1,0 +1,21 @@
+.container {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--primary);
+    background-color: var(--info);
+    position: relative;
+}
+
+.pote {
+    position: absolute;
+    width: 300px;
+    left: 300px;
+}
+
+.relative {
+    position: relative;
+}
