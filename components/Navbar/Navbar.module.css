@@ -12,3 +12,13 @@
     height: 75px;
     position: relative;
 }
+
+.container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container ul li {
+    margin-right: 1vw;
+}

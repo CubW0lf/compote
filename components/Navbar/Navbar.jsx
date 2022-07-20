@@ -18,7 +18,18 @@ const Navbar = () => {
         </a>
       </Link>
 
-      <span>A propos</span>
+      <ul>
+        <li>
+          <Link href="/votre-projet">
+            <a>Votre Projet</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/prestations">
+            <a>Prestations sur mesure</a>
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };
