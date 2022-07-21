@@ -5,13 +5,17 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 10vh 5vw 5vw 5vw;
+  padding: 6vh 5vw 5vw 5vw;
   width: 100%;
   height: auto;
 }
 
 .form {
   width: 100%;
+}
+
+.form a {
+  cursor: zoom-in;
 }
 
 .form h2 {
@@ -51,15 +55,34 @@
 .column:nth-child(1),
 .column:nth-child(2) {
   width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
 
 .inputContainer {
   outline: 1px solid var(--primary);
   border-radius: 15px;
   width: 100%;
-  padding: 1vw;
+  height: 6vh;
   position: relative;
-  margin-top: 3vh;
+}
+
+.inputContainer p {
+  position: absolute;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.column:nth-child(2) p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .label {
@@ -73,9 +96,12 @@
 }
 
 .textarea {
-  height: 25vh;
+  height: 100%;
+  width: 100%;
   line-height: 130%;
+  padding: 5vw;
   color: var(--text);
+  outline: 1px solid var(--primary);
 }
 
 .mark {
@@ -114,15 +140,81 @@
   margin-top: 0;
 }
 
-.checkbox {
+.policy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2vh 0;
+}
+
+/* Switch */
+
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.switch:not(#foo) > input[type="checkbox"] {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.switch:not(#foo) > input[type="checkbox"] + label {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.switch:not(#foo) > input[type="checkbox"] + label span {
+  width: 80%;
+}
+
+.switch:not(#foo) > input[type="checkbox"]:checked + label > div {
+  background-color: var(--primary);
+  transition: all .4s;
+}
+
+.switch:not(#foo) > input[type="checkbox"]:checked + label > div > svg {
+  color: var(--body);
+  transition: all .4s;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+
+.toggle {
+  width: 10vh;
+  border-radius: 5vh;
+  height: 5vh;
+  outline: 1px solid var(--primary);
+  cursor: pointer;
+  transition: all .4s;
+  position: relative;
+}
+
+.toggle svg {
+  font-size: 5vh;
+  color: var(--primary);
+  transition: all .4s;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.policy p {
+  text-align: right;
+  width: 100%;
+}
+
 @media screen and (min-width: 1200px) {
   .container {
-    height: 100vh;
+    height: 90vh;
   }
 
   .formContainer {
@@ -131,10 +223,25 @@
 
   .column:nth-child(1) {
     width: 37%;
+    height: 25vh;
+    justify-content: space-between;
   }
 
   .column:nth-child(2) {
     width: 60%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .column:nth-child(2) p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .inputContainer {
@@ -142,7 +249,23 @@
     border-radius: 15px;
     width: 100%;
     position: relative;
-    margin-top: 2vh;
     padding: 0;
+  }
+
+  .inputContainer p {
+    position: absolute;
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .toggle {
+    width: 4vh;
+    border-radius: 2vh;
+    height: 2vh;
+  }
+
+  .toggle svg {
+    font-size: 2vh;
   }
 }

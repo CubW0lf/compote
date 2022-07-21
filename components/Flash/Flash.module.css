@@ -27,7 +27,9 @@
 }
 
 .error {
-    background-color: var(--error);
+    background-color: var(--body);
+    color: var(--error);
+    border-radius: 50%;
 }
 
 .error svg {
@@ -43,7 +45,5 @@
 
 .success svg {
     color: white;
-    background-color: var(--success);
-    filter: drop-shadow(0 0 5px white);
-    border-radius: 50%;
+    filter: drop-shadow(0 0 5px var(--error));
 }

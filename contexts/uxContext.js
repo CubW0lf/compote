@@ -8,6 +8,7 @@ export const UxWrapper = ({ children }) => {
   const [flash, setFlash] = useState("");
   const [flashType, setFlashType] = useState("");
   const [menuVisible, toggleMenuVisibility] = useState(false);
+  const [modalVisible, toggleModalVisibility] = useState(false);
 
   const router = useRouter();
 
@@ -29,6 +30,8 @@ export const UxWrapper = ({ children }) => {
         handleFlash,
         menuVisible,
         toggleMenuVisibility,
+        modalVisible,
+        toggleModalVisibility,
       }}
     >
       {children}

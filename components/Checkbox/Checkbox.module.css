@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container:not(#foo) > input[type="checkbox"] {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.container:not(#foo) > input[type="checkbox"] + label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container:not(#foo) > input[type="checkbox"]:checked + label > div {
+    background-color: var(--primary);
+    transition: all .4s;
+}
+
+.container:not(#foo) > input[type="checkbox"]:checked + label > div > svg {
+    color: var(--body);
+    transition: all .4s;
+    left: 100%;
+    transform: translate(-100%, -50%);
+}
+
+.switch {
+    width: 4vh;
+    border-radius: 2vh;
+    height: 2vh;
+    outline: 1px solid var(--primary);
+    cursor: pointer;
+    transition: all .4s;
+    position: relative;
+}
+
+.switch svg {
+    font-size: 2vh;
+    color: var(--primary);
+    transition: all .4s;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}

@@ -34,10 +34,10 @@ const NavModal = () => {
         <li className={menuVisible ? styles.enter : styles.leave} onClick={() => toggleMenuVisibility(false)}>
           <Link href="/prestations">
             <a>
-              <span>Prestations sur mesure</span>
+              <span>Prestations</span>
             </a>
           </Link>
-          <span>Toutes les prestations en détail</span>
+          <span>Toutes les prestations sur mesure</span>
         </li>
 
         <li className={menuVisible ? styles.enter : styles.leave} onClick={() => toggleMenuVisibility(false)}>
@@ -60,7 +60,9 @@ const NavModal = () => {
       </ul>
 
       <Dialog.Overlay ref={backdrop} className={styles.backdrop} onClick={() => toggleMenuVisibility(false)}>
-        <ToggleMenuIcon />
+        <div className="not-mobile">
+          <ToggleMenuIcon />
+        </div>
       </Dialog.Overlay>
     </Dialog>
   );

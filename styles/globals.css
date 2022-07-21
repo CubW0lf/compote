@@ -163,13 +163,15 @@ select,
 textarea {
   border: none;
   margin: 0;
-  padding: 1vw;
+  padding: 4vw;
+  height: 100%;
   background-color: transparent;
   width: 100%;
   color: var(--dark);
   font-size: 2vh;
   outline-color: var(--primary);
   border-radius: 15px;
+  font-weight: 200;
 }
 
 input:focus,
@@ -209,13 +211,38 @@ input:-internal-autofill-selected {
 
 .error {
   color: var(--error);
+  font-weight: 400;
 }
 
 .success {
   color: var(--success);
 }
 
+div.error {
+  background-color: var(--error);
+}
+
+div.success {
+  background-color: var(--success);
+}
+
+.mobile {
+  display: block;
+}
+
+.not-mobile {
+  display: none;
+}
+
 @media screen and (min-width:1200px) {
+
+  .mobile {
+    display: none;
+  }
+
+  .not-mobile {
+    display: block;
+  }
 
   p,
   li {
@@ -243,5 +270,12 @@ input:-internal-autofill-selected {
     border-radius: 15px;
     padding: 20px 24px;
     font-size: 19px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 1vw;
   }
 }
