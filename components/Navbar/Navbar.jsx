@@ -1,34 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
-import logo from "../../public/assets/images/logo.png";
+import ToggleMenuIcon from "../ToggleMenuIcon/ToggleMenuIcon";
+import { useEffect, useState } from "react";
+import { getAll } from "../../services/directus/utils";
+import getAssetURL from "../../services/directus/getAssets";
+import Tagline from "../Tagline/Tagline";
 
 const Navbar = () => {
+  const [networks, setNetworks] = useState(null);
+
+  useEffect(() => {
+    getAll("network")
+      .then((response) => setNetworks(response))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <nav className={styles.container}>
-      <Link href="/">
-        <a>ComPote</a>
-      </Link>
+      <ToggleMenuIcon />
 
-      <Link href="/">
-        <a>
-          <div className={styles.logo}>
-            <Image src={logo} alt="Logo de ComPote" layout="responsive" />
-          </div>
-        </a>
-      </Link>
+      <Tagline />
 
       <ul>
-        <li>
-          <Link href="/votre-projet">
-            <a>Votre Projet</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/prestations">
-            <a>Prestations sur mesure</a>
-          </Link>
-        </li>
+        {networks &&
+          networks.map((n) => (
+            <li key={n.id} className={styles.networkItem}>
+              <a href={n.url} target="_blank" rel="noreferrer">
+                {n.logo && <Image src={getAssetURL(n.logo.id)} alt="" layout="fill" objectFit="contain" />}
+              </a>
+            </li>
+          ))}
       </ul>
     </nav>
   );

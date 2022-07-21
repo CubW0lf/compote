@@ -7,6 +7,7 @@ const uxContext = createContext();
 export const UxWrapper = ({ children }) => {
   const [flash, setFlash] = useState("");
   const [flashType, setFlashType] = useState("");
+  const [menuVisible, toggleMenuVisibility] = useState(false);
 
   const router = useRouter();
 
@@ -26,6 +27,8 @@ export const UxWrapper = ({ children }) => {
         flash,
         flashType,
         handleFlash,
+        menuVisible,
+        toggleMenuVisibility,
       }}
     >
       {children}

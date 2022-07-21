@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 3;
+}
+
+.container span {
+    font-family: var(--titleFont);
+    font-weight: ExtraLight 200;
+    font-style: italic;
+    color: var(--info);
+    font-size: 1.5vw;
+    margin-bottom: 7%;
+    padding: 0 .5vw;
+    text-align: center;
+}
+
+.logo {
+    width: 15vh;
+    height: 15vh;
+    position: relative;
+    filter: drop-shadow(0 0 10px var(--body));
+}

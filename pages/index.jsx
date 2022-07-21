@@ -1,5 +1,7 @@
 import Head from "next/head";
-import Slider from "../components/Slider/Slider";
+import Landing from "../components/Landing/Landing";
+import Overview from "../components/Overview/Overview";
+import Reviews from "../components/Reviews/Reviews";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -11,11 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <Slider />
-        <main>
-          <h1>ComPote</h1>
-          <h2>Votre acolyte dans tous vos projets</h2>
-        </main>
+        <Landing />
+        <Overview />
+        <Reviews />
       </div>
     </>
   );

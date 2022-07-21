@@ -11,7 +11,7 @@ module.exports = withPWA({
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["api.compote.vincentcottalorda.me"],
+    domains: ["api.compote.me"],
   },
   publicRuntimeConfig: {
     url: process.env.DIRECTUS_URL,

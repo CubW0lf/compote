@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: drop-shadow(1px 1px 10px black);
+    height: 90vh;
+}
+
+.container > div {
+    width: 50%;
+    height: 80%;
+    position: relative;
+}
+
+.text {
+    padding: 2vw;
+}
+
+.text h1 {
+    margin-bottom: 2vh;
+}
