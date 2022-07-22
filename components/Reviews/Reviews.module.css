@@ -50,15 +50,16 @@
 
 .percent ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%
 }
 
-.relative {
-    position: relative;
-    width: 5vw;
-    height: 5vw;
+.percent ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .absolute {

@@ -36,6 +36,10 @@
   padding: 0;
 }
 
+*:focus {
+  outline-color: var(--highlight);
+}
+
 html,
 body {
   height: 100%;
@@ -224,6 +228,44 @@ div.error {
 
 div.success {
   background-color: var(--success);
+}
+
+/* Slider Swiper */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: var(--primary) !important;
+  font-size: 5vh !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: var(--body);
+  width: 6vh !important;
+  height: 10vh !important;
+  transform: translateY(-39%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: auto !important;
+  right: auto !important;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+  right: auto !important;
+}
+
+.swiper-button-next {
+  left: auto !important;
+  right: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--body) !important;
+  width: 1.5vh !important;
+  height: 1.5vh !important;
 }
 
 .mobile {

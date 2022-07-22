@@ -128,7 +128,7 @@ const Contact = () => {
           <div className={styles.policy}>
             <div className={styles.switch}>
               <input type="checkbox" id="accept" {...register("privacy_policy", { required: true })} />
-              <label htmlFor="accept">
+              <label htmlFor="accept" tabIndex="0">
                 <span>
                   J&apos;accepte les conditions de gestions et de traitement de mes informations{" "}
                   <a onClick={handleModal}>Informations sur le traitement des données</a>

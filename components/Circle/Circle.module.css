@@ -1,0 +1,39 @@
+.container {
+    width: 7vw;
+    height: 7vw;
+    position: relative;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 7vw;
+    height: 7vw;
+    border: .5vw solid var(--body);
+    position: absolute;
+}
+
+.quarter {
+    border-radius: 50%;
+    width: 7vw;
+    height: 7vw;
+    border: .5vw solid var(--primary);
+    clip-path: polygon(50% 0%, 100% 0, 100% 47%, 50% 47%);
+    position: absolute;
+}
+
+.percent {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent span {
+    font-weight: 200;
+    font-family: var(--titleFont);
+    font-style: italic;
+    font-size: 4vh;
+}

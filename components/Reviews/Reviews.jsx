@@ -3,6 +3,7 @@ import styles from "./Reviews.module.css";
 import background from "../../public/assets/images/reviews.jpg";
 import percent from "../../public/assets/images/percent.png";
 import pote from "../../public/assets/images/pote_review.png";
+import Circle from "../Circle/Circle";
 
 const Reviews = () => {
   return (
@@ -26,27 +27,19 @@ const Reviews = () => {
       <div className={styles.percent}>
         <ul>
           <li>
-            <div className={styles.relative}>
-              <Image src={percent} alt="" layout="fill" objectFit="contain" />
-            </div>
+            <Circle deg={0} />
             de conseils
           </li>
           <li>
-            <div className={styles.relative}>
-              <Image src={percent} alt="" layout="fill" objectFit="contain" />
-            </div>
-            d&apos;échanges
+            <Circle deg={90} />
+            de connaissances
           </li>
           <li>
-            <div className={styles.relative}>
-              <Image src={percent} alt="" layout="fill" objectFit="contain" />
-            </div>
+            <Circle deg={180} />
             de communications
           </li>
           <li>
-            <div className={styles.relative}>
-              <Image src={percent} alt="" layout="fill" objectFit="contain" />
-            </div>
+            <Circle deg={270} />
             d&apos;humain
           </li>
         </ul>
