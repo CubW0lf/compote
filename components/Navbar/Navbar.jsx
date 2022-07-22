@@ -22,7 +22,7 @@ const Navbar = () => {
 
       <Tagline />
 
-      <ul>
+      <ul className="not-mobile">
         {networks &&
           networks.map((n) => (
             <li key={n.id} className={styles.networkItem}>

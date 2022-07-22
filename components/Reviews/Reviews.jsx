@@ -1,23 +1,56 @@
 import Image from "next/image";
 import styles from "./Reviews.module.css";
-import background from "../../public/assets/images/reviews.jpg";
-import percent from "../../public/assets/images/percent.png";
 import pote from "../../public/assets/images/pote_review.png";
 import Circle from "../Circle/Circle";
+import { useEffect, useState } from "react";
+import { getAll } from "../../services/directus/utils";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper";
+import quote from "../../public/assets/images/quote.png";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 const Reviews = () => {
+  const [reviews, setReviews] = useState();
+
+  useEffect(() => {
+    getAll("review")
+      .then((response) => setReviews(response))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.reviews}>
-        <h1>Des Avis</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, hic? Repellat asperiores debitis cupiditate,
-          quam amet quisquam minus, sapiente provident saepe nobis at ad earum sunt eius, nesciunt facere qui?
-        </p>
-        <p>Machin truc</p>
-        <div className={styles.bg}>
-          <Image src={background} alt="" layout="fill" objectFit="contain" objectPosition="right" />
+        <div className={styles.quote}>
+          <Image src={quote} alt="" layout="fill" objectFit="contain" />
         </div>
+        <h1>Les avis de nos clients</h1>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          pagination={{
+            clickable: true,
+            bulletClass: "bullet",
+            bulletActiveClass: "bullet-active",
+            horizontalClass: "horizontal-pagination",
+          }}
+          autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          className={styles.slider}
+        >
+          {reviews &&
+            reviews?.map((s) => (
+              <SwiperSlide key={s.id} className={styles.slide}>
+                <div className={styles.background}>
+                  <div dangerouslySetInnerHTML={{ __html: s.text && s.text }} className={styles.reviewText}></div>
+                  {s.name && <h2 dangerouslySetInnerHTML={{ __html: s.name }}></h2>}
+                </div>
+              </SwiperSlide>
+            ))}
+        </Swiper>
         <div className={styles.absolute}>
           <div className={styles.pote}>
             <Image src={pote} alt="" layout="fill" objectFit="contain" objectPosition="left" />

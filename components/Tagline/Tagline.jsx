@@ -6,7 +6,7 @@ import styles from "./Tagline.module.css";
 const Tagline = () => {
   return (
     <div className={styles.container}>
-      <span>Votre acolyte dans tous vos projets</span>
+      <span className="not-mobile">Votre acolyte dans tous vos projets</span>
       <Link href="/">
         <a>
           <div className={styles.logo}>
@@ -14,7 +14,7 @@ const Tagline = () => {
           </div>
         </a>
       </Link>
-      <span>ComPote pour une com qui dépote</span>
+      <span className="not-mobile">ComPote pour une com qui dépote</span>
     </div>
   );
 };

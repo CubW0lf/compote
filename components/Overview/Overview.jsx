@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Overview = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="a-propos">
       <div className={styles.mockup}>
         <Image src={mockup} alt="" layout="fill" objectFit="contain" />
       </div>

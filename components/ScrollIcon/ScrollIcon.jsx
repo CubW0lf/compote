@@ -5,7 +5,9 @@ import scroll from "../../public/assets/images/Scroll.png";
 const ScrollIcon = () => {
   return (
     <div className={styles.container}>
-      <Image src={scroll} alt="" layout="fill" objectFit="contain" />
+      <a href="#a-propos">
+        <Image src={scroll} alt="" layout="fill" objectFit="contain" />
+      </a>
     </div>
   );
 };

@@ -2,17 +2,17 @@
 
 /*
 1. Variables
-2. RESET
-3. Blocks
-4. Inline
-5. ID
-6. Classes
+2. Blocks
+3. Inline
+4. ID
+5. Classes
 */
 
-/* Variables */
+/* 1 Variables */
 
 :root {
   --primary: #6BC1B9;
+  --primary-alt: #9FAEAC;
   --highlight: #F29A77;
   --dark: #353535;
   --body: #FFFFFF;
@@ -23,81 +23,13 @@
   --titleFont: 'Barlow Condensed', sans-serif;
 }
 
-/* 2 RESET */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*:focus {
-  outline-color: var(--highlight);
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: var(--font);
-  background-color: var(--body);
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-#root,
-#__next {
-  isolation: isolate;
-}
-
-/* 3 Block */
+/* 2 Block */
 
 main {
   padding: 2vw;
 }
 
-/* 4 inline */
+/* 3 inline */
 
 a {
   color: var(--highlight);
@@ -210,8 +142,8 @@ input:-internal-autofill-selected {
   outline: 1px solid var(--primary);
 }
 
-/* 5 ID */
-/* 6 Classes */
+/* 4 ID */
+/* 5 Classes */
 
 .error {
   color: var(--error);
@@ -230,60 +162,22 @@ div.success {
   background-color: var(--success);
 }
 
-/* Slider Swiper */
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  color: var(--primary) !important;
-  font-size: 5vh !important;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  background-color: var(--body);
-  width: 6vh !important;
-  height: 10vh !important;
-  transform: translateY(-39%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  left: auto !important;
-  right: auto !important;
-}
-
-.swiper-button-prev {
-  left: 0 !important;
-  right: auto !important;
-}
-
-.swiper-button-next {
-  left: auto !important;
-  right: 0 !important;
-}
-
-.swiper-pagination-bullet {
-  background: var(--body) !important;
-  width: 1.5vh !important;
-  height: 1.5vh !important;
-}
-
 .mobile {
-  display: block;
+  display: flex !important;
 }
 
 .not-mobile {
-  display: none;
+  display: none !important;
 }
 
 @media screen and (min-width:1200px) {
 
   .mobile {
-    display: none;
+    display: none !important;
   }
 
   .not-mobile {
-    display: block;
+    display: flex !important;
   }
 
   p,

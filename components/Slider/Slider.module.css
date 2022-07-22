@@ -23,3 +23,49 @@
     width: 100%;
     height: 100%;
 }
+
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    position: relative;
+}
+
+.slider h2 {
+    text-align: center;
+    position: relative;
+    z-index: 6;
+    background-color: var(--body);
+    padding: 1vw 2vw;
+    transition: all 1s;
+}
+
+.background:hover h2 {
+    transform: scale(1.7);
+    transition: all 1s;
+}
+
+.slide a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
