@@ -12,10 +12,19 @@ export const UxWrapper = ({ children }) => {
 
   const router = useRouter();
 
+  /**
+   * deleteMessage - delete the current FlashMessage
+   */
   const deleteMessage = useCallback(() => {
     setFlash("");
   }, []);
 
+  /**
+   * @function handleFlash - create a flash Message
+   * @param {String} type - the type of the flash (error, success, warning, info)
+   * @param {string} text - The full text of the flash message
+   * @param {number} duration - The duration of the flash message (before it will be unset)
+   */
   const handleFlash = useCallback(
     (type, text, duration) => {
       setFlashType(type);

@@ -9,6 +9,7 @@
     z-index: 5;
     background-color: var(--body);
     box-shadow: 0 0 5px var(--info);
+    z-index: 9999;
 }
 
 .container ul {

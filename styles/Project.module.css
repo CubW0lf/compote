@@ -1,11 +1,120 @@
-.container {
-    padding: 5vw;
+.header {
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.header h1 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 .video {
-    background-color: var(--dark);
-    width: 70%;
-    height: 500px;
-    margin: 2vh auto;
+    width: 50vw;
+    height: 25vw;
     color: var(--body);
+    border: 1vw solid var(--body);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.pote {
+    width: 20vw;
+    height: 60%;
+    position: absolute;
+    left: 12%;
+    top: 100%;
+    transform: translate(-50%, -90%);
+}
+
+.container main {
+    margin: 20vh auto;
+}
+
+.article_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 5vw 0;
+}
+
+.article {
+    width: 50%;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2vw 0;
+}
+
+.cta span {
+    color: var(--highlight);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--titleFont);
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 2vh;
+}
+
+.cafe {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-5vw);
+}
+
+.wrapper {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+}
+
+.examples {
+    background-color: var(--darkBlue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw 5vw 5vw 5vw;
+    position: relative;
+}
+
+.examples h2 {
+    font-size: 5vw;
+    color: var(--body);
+    font-weight: 200;
+    font-style: italic;
+    font-family: var(--titleFont);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2vw;
+}
+
+.goToServices {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }

@@ -2,7 +2,13 @@ import directus from "./directus";
 
 // Items
 
-/** @function */
+/**
+ * [get All items of an item collection (database)]
+ *
+ * @param   {[String]}  item  [item to fetch]
+ *
+ * @return  {[Promise]}        [return response]
+ */
 export const getAll = async (item) => {
   return directus
     .items(item)
@@ -11,7 +17,14 @@ export const getAll = async (item) => {
     .catch((error) => error);
 };
 
-/** @function */
+/**
+ * [getAllBy Items of an item collection with a specific Query]
+ *
+ * @param   {[String]}  item  [item to fetch]
+ * @param   {[String]}  query  [query to fetch]
+ *
+ * @return  {[Promise<Object>]}         [return response]
+ */
 export const getAllBy = async (item, query) => {
   return directus
     .items(item)
@@ -20,7 +33,14 @@ export const getAllBy = async (item, query) => {
     .catch((error) => error);
 };
 
-/** @function */
+/**
+ * [return one item of a collection by its ID]
+ *
+ * @param   {[String]}  item  [item type to fetch]
+ * @param   {[Number]}  id    [id of the item to fetch]
+ *
+ * @return  {[Promise<String>]}        [return response]
+ */
 export const find = async (item, id) => {
   return await directus
     .items(item)
@@ -31,17 +51,38 @@ export const find = async (item, id) => {
     .catch((error) => error);
 };
 
-/** @function */
+/**
+ * [create an item]
+ *
+ * @param   {[String]}  item    [item type to create]
+ * @param   {[Object]}  object  [item to create]
+ *
+ * @return  {[Promise]}          [return response]
+ */
 export const createItem = async (item, object) => {
   return await directus.items(item).createOne(object);
 };
 
-/** @function */
+/**
+ * [delete an Item]
+ *
+ * @param   {[String]}  item  [item type to delete]
+ * @param   {[Number]}  id    [id of the item to delete]
+ *
+ * @return  {[Promise]}        [return a responses]
+ */
 export const deleteItem = async (item, id) => {
   return await directus.items(item).deleteOne(id);
 };
 
-/** @function */
+/**
+ * [update an item]
+ *
+ * @param   {[String]}  item  [item type to update]
+ * @param   {[Number]}  id    [id of the item to delete]
+ *
+ * @return  {[Promise]}        [return Promise]
+ */
 export const update = async (item, id) => {
   return await directus.items(item).updateOne(id);
 };

@@ -15,6 +15,7 @@
   --primary-alt: #9FAEAC;
   --highlight: #F29A77;
   --dark: #353535;
+  --darkBlue: #565d69;
   --body: #FFFFFF;
   --success: #4CEA9A;
   --error: #E8544D;
@@ -24,10 +25,6 @@
 }
 
 /* 2 Block */
-
-main {
-  padding: 2vw;
-}
 
 /* 3 inline */
 
@@ -79,16 +76,16 @@ hr {
 
 button {
   border: 0;
-  border-radius: 10px;
-  background: var(--primary);
+  background: var(--info);
+  text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
   padding: 15px 20px;
-  color: var(--body);
-  font-family: var(--font);
+  color: var(--dark);
+  font-family: var(--titleFont);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 200;
   font-style: italic;
   line-height: 1;
 }
@@ -203,9 +200,8 @@ div.success {
   }
 
   button {
-    border-radius: 15px;
     padding: 20px 24px;
-    font-size: 19px;
+    font-size: 30px;
   }
 
   input[type="text"],
