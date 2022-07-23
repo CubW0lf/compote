@@ -1,8 +1,13 @@
 .container {
     position: absolute;
     bottom: 2vh;
-    width: 2vw;
-    height: 4vw;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.container a {
+    width: 2vw;
+    height: 4vw;
+    display: block;
+    position: relative;
 }

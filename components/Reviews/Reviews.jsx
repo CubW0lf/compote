@@ -46,7 +46,7 @@ const Reviews = () => {
               <SwiperSlide key={s.id} className={styles.slide}>
                 <div className={styles.background}>
                   <div dangerouslySetInnerHTML={{ __html: s.text && s.text }} className={styles.reviewText}></div>
-                  {s.name && <h2 dangerouslySetInnerHTML={{ __html: s.name }}></h2>}
+                  {s.name && <span dangerouslySetInnerHTML={{ __html: s.name }} className={styles.name}></span>}
                 </div>
               </SwiperSlide>
             ))}
@@ -61,21 +61,28 @@ const Reviews = () => {
         <ul>
           <li>
             <Circle deg={0} />
-            de conseils
+            <span>de conseils</span>
           </li>
           <li>
             <Circle deg={90} />
-            de connaissances
+            <span>de connaissances</span>
           </li>
           <li>
             <Circle deg={180} />
-            de communications
+            <span>de communications</span>
           </li>
           <li>
             <Circle deg={270} />
-            d&apos;humain
+            <span>d&apos;humain</span>
           </li>
         </ul>
+      </div>
+      <div className={styles.hundredContainer}>
+        <div className={styles.hundredCircle}></div>
+        <div className={styles.percentCircle}>
+          <span>100%</span>
+        </div>
+        <span>Com&apos; Pote</span>
       </div>
     </div>
   );

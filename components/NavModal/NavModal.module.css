@@ -17,10 +17,10 @@
   background-color: black;
   position: fixed;
   padding: 2vw;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
-  cursor: pointer;
+  cursor: zoom-out;
 }
 
 .container a {
@@ -70,7 +70,8 @@
   animation: 1s ease-in-out forwards grow;
 }
 
-.container li:nth-child(even) span:nth-child(1):hover::before {
+.container li:nth-child(even) span:nth-child(1):hover::before,
+.container li:nth-child(even) span:nth-child(1):focus::before {
   right: 0;
   left: auto;
 }
@@ -143,7 +144,8 @@
     transform: translateX(100%);
   }
 
-  .container li span:nth-child(1):hover::before {
+  .container li span:nth-child(1):hover::before,
+  .container li a:focus::before {
     content: "";
     background-color: var(--primary);
     transform: translateX(0);

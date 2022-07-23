@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { createContext, useContext } from "react";
 
 const uxContext = createContext();
@@ -12,15 +12,18 @@ export const UxWrapper = ({ children }) => {
 
   const router = useRouter();
 
-  const deleteMessage = () => {
+  const deleteMessage = useCallback(() => {
     setFlash("");
-  };
+  }, []);
 
-  const handleFlash = (type, text, duration) => {
-    setFlashType(type);
-    setFlash(text);
-    setTimeout(deleteMessage, duration);
-  };
+  const handleFlash = useCallback(
+    (type, text, duration) => {
+      setFlashType(type);
+      setFlash(text);
+      setTimeout(deleteMessage, duration);
+    },
+    [deleteMessage]
+  );
 
   return (
     <uxContext.Provider

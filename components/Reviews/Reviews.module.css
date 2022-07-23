@@ -5,13 +5,13 @@
 .reviews {
     height: 60vh;
     width: 100%;
+    padding: 5vw;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--dark);
-
 }
 
 .quote {
@@ -23,8 +23,8 @@
 .reviews h1 {
     position: relative;
     color: white;
-    font-size: 10vh;
     z-index: 4;
+    font-size: 10vw;
 }
 
 .reviews > p {
@@ -48,7 +48,8 @@
 .percent {
     background: #565d69;
     color: white;
-    height: 20vh;
+    height: auto;
+    padding: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,9 +57,9 @@
 }
 
 .percent ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
     width: 100%
 }
 
@@ -67,6 +68,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.percent ul li span {
+    font-size: 5vw;
 }
 
 .absolute {
@@ -80,7 +85,8 @@
 .pote {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 60%;
+    margin-left: -10%;
 }
 
 .slider {
@@ -102,25 +108,135 @@
 .background {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;
+    margin-top: 5vh;
     transition: all 1s;
     position: relative;
 }
 
-.slider h2 {
+.name {
     text-align: center;
     position: relative;
     z-index: 6;
     color: var(--body);
     padding: 1vw 2vw;
     transition: all 1s;
+    font-size: 5vw;
 }
 
 .reviewText {
     width: 60%;
     color: var(--highlight);
     text-align: center;
+}
+
+.reviewText p {
+    font-size: 4vw;
+}
+
+.hundredContainer {
+    padding: 10vw;
+    width: 100%;
+    height: 40vw;
+    background: #565d69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hundredCircle {
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    border: 2vw solid var(--primary);
+    position: absolute;
+}
+
+.percentCircle {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--body);
+}
+
+.percentCircle span {
+    font-weight: 200;
+    font-family: var(--titleFont);
+    font-style: italic;
+    font-size: 4vh;
+}
+
+.hundredContainer > span {
+    margin-top: 30vw;
+    color: var(--body);
+    font-size: 5vw;
+}
+
+@media screen and (min-width:1200px) {
+    .reviews {
+        justify-content: center;
+    }
+
+    .reviews h1 {
+        font-size: 5vw;
+    }
+
+    .name {
+        font-size: 2vw;
+    }
+
+    .reviewText p {
+        font-size: 1.7vw;
+    }
+
+    .background {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .pote {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .percent {
+        height: 20vh;
+        padding: 0;
+    }
+
+    .percent ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%
+    }
+
+    .percent ul li span {
+        font-size: 1.7vw;
+    }
+
+    .hundredCircle {
+        width: 7vw;
+        height: 7vw;
+        border: .5vw solid var(--primary);
+    }
+
+    .percentCircle {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .hundredContainer > span {
+        margin-top: 10vw;
+        font-size: 2vw;
+    }
 }

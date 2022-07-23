@@ -1,5 +1,9 @@
 /* Slider Swiper */
 
+.swiper {
+    height: 100%;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
     color: var(--primary) !important;
@@ -69,7 +73,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 15% !important;
-    bottom: 0 !important;
+    width: 20% !important;
+    bottom: 2vh !important;
     left: auto !important;
+}
+
+@media screen and (min-width:1200px) {
+    .horizontal-pagination {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 15% !important;
+        bottom: 0 !important;
+        left: auto !important;
+    }
 }

@@ -14,7 +14,7 @@ const NavModal = () => {
     <Dialog open={menuVisible} onClose={() => toggleMenuVisibility(false)} initialFocus={backdrop}>
       <ul className={styles.container}>
         <li className={menuVisible ? styles.enter : styles.leave} onClick={() => toggleMenuVisibility(false)}>
-          <Link href="/" tabIndex="-1">
+          <Link href="/" tabIndex="0">
             <a>
               <span>Accueil</span>
             </a>
@@ -59,11 +59,11 @@ const NavModal = () => {
         </li>
       </ul>
 
-      <Dialog.Overlay ref={backdrop} className={styles.backdrop} onClick={() => toggleMenuVisibility(false)}>
-        <div className="not-mobile">
-          <ToggleMenuIcon />
-        </div>
-      </Dialog.Overlay>
+      <Dialog.Overlay
+        ref={backdrop}
+        className={styles.backdrop}
+        onClick={() => toggleMenuVisibility(false)}
+      ></Dialog.Overlay>
     </Dialog>
   );
 };

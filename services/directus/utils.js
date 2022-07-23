@@ -2,6 +2,7 @@ import directus from "./directus";
 
 // Items
 
+/** @function */
 export const getAll = async (item) => {
   return directus
     .items(item)
@@ -10,6 +11,7 @@ export const getAll = async (item) => {
     .catch((error) => error);
 };
 
+/** @function */
 export const getAllBy = async (item, query) => {
   return directus
     .items(item)
@@ -18,6 +20,7 @@ export const getAllBy = async (item, query) => {
     .catch((error) => error);
 };
 
+/** @function */
 export const find = async (item, id) => {
   return await directus
     .items(item)
@@ -28,14 +31,17 @@ export const find = async (item, id) => {
     .catch((error) => error);
 };
 
+/** @function */
 export const createItem = async (item, object) => {
   return await directus.items(item).createOne(object);
 };
 
+/** @function */
 export const deleteItem = async (item, id) => {
   return await directus.items(item).deleteOne(id);
 };
 
+/** @function */
 export const update = async (item, id) => {
   return await directus.items(item).updateOne(id);
 };

@@ -1,18 +1,22 @@
 import styles from "./ToggleMenuIcon.module.css";
 import { useUxContext } from "../../contexts/uxContext";
+import { useCallback } from "react";
 
 const ToggleMenuIcon = () => {
   const { menuVisible, toggleMenuVisibility } = useUxContext();
 
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      toggleMenuVisibility(!menuVisible);
-    }
-  };
+  const handleKeyPress = useCallback(
+    (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        toggleMenuVisibility(!menuVisible);
+      }
+    },
+    [toggleMenuVisibility, menuVisible]
+  );
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     toggleMenuVisibility(!menuVisible);
-  };
+  }, [menuVisible, toggleMenuVisibility]);
 
   return (
     <a

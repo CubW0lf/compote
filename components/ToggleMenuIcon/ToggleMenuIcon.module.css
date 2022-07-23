@@ -53,27 +53,29 @@
   background-color: var(--primary);
   position: absolute;
   transform: translateY(0) rotate(0);
+  z-index: 99999;
   transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out, bottom 0.4s 0.4s ease-in-out,
     background-color 0.4s ease-in-out, width 0.4s 0.4s ease-in-out;
-  z-index: 99999;
 }
 
 .burger div:nth-child(1) {
   top: 10%;
+  transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out, bottom 0.4s 0.4s ease-in-out,
+    background-color 0.4s ease-in-out, width 0.4s 0.4s ease-in-out;
 }
 
 .burger div:nth-child(3) {
   bottom: 10%;
+  transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out, bottom 0.4s 0.4s ease-in-out,
+    background-color 0.4s ease-in-out, width 0.4s 0.4s ease-in-out;
 }
 
 @media screen and (min-width: 1200px) {
   .burger {
-    left: 2vw;
     transform: translateX(0);
   }
 
   .cross {
-    left: 2vw;
     transform: translateX(0);
   }
 }

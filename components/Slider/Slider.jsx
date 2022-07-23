@@ -44,6 +44,7 @@ const Slider = () => {
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center center"
+                        priority="true"
                       />
                     )}
                   </div>
