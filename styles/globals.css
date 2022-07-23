@@ -54,7 +54,7 @@ h1 {
 h2 {
   color: var(--dark);
   font-family: var(--titleFont);
-  font-size: 5vw;
+  font-size: 7vw;
   line-height: 137.72%;
   font-weight: 200;
   font-style: italic;
@@ -63,7 +63,10 @@ h2 {
 h3 {
   color: var(--dark);
   font-family: var(--titleFont);
-  font-size: 10vw;
+  font-size: 5vw;
+  line-height: 1;
+  font-weight: 200;
+  font-style: italic;
 }
 
 hr {

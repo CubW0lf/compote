@@ -1,5 +1,5 @@
 .header {
-    height: 400px;
+    height: 350px;
     width: 100%;
     position: relative;
 }
@@ -7,9 +7,13 @@
 .header h1 {
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 1%;
     z-index: 5;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
+    font-size: 10vw;
+    line-height: 1;
+    width: 100%;
+    text-align: center;
 }
 
 .banner {
@@ -19,13 +23,13 @@
 }
 
 .video {
-    width: 50vw;
-    height: 25vw;
+    width: 90vw;
+    height: 50vw;
     color: var(--body);
     border: 1vw solid var(--body);
     position: absolute;
     left: 50%;
-    top: 100%;
+    top: 70%;
     transform: translate(-50%, -50%);
 }
 
@@ -33,13 +37,9 @@
     width: 20vw;
     height: 60%;
     position: absolute;
-    left: 12%;
-    top: 100%;
-    transform: translate(-50%, -90%);
-}
-
-.container main {
-    margin: 20vh auto;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
 }
 
 .article_wrapper {
@@ -49,11 +49,11 @@
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 5vw 0;
 }
 
 .article {
-    width: 50%;
+    width: 100%;
+    padding: 2vw;
 }
 
 .cta {
@@ -94,7 +94,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2vw 5vw 5vw 5vw;
+    padding: 2vw 5vw 10vw 5vw;
     position: relative;
 }
 
@@ -117,4 +117,59 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
+}
+
+.spacer {
+    position: relative;
+    height: 20vh;
+}
+
+.observateur {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    z-index: 1;
+}
+
+@media screen and (min-width:1200px) {
+    .header {
+        height: 400px;
+    }
+
+    .header h1 {
+        font-size: 5vw;
+        top: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    .video {
+        width: 50vw;
+        height: 25vw;
+        top: 100%;
+    }
+
+    .pote {
+        left: 12%;
+        top: 100%;
+        transform: translate(-50%, -90%);
+    }
+
+    .container main {
+        margin: 20vh auto;
+    }
+
+    .article {
+        width: 50%;
+    }
+
+    .examples {
+        background-color: var(--darkBlue);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw 5vw 5vw 5vw;
+        position: relative;
+    }
 }

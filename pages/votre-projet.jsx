@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Project.module.css";
 import quadrillage from "../public/assets/images/quadrillage.png";
 import pote from "../public/assets/images/potes/pote_ordi.png";
+import observateur from "../public/assets/images/potes/pote_observateur.png";
 import { find, getAll } from "../services/directus/utils";
 import cafe from "../public/assets/images/potes/pote_cafe.png";
 import ProjectTile from "../components/ProjectTile/ProjectTile";
@@ -37,7 +38,7 @@ const Project = ({ page, projects }) => {
           <div className={styles.banner}>
             <Image src={quadrillage} alt="" layout="fill" objectFit="cover" />
           </div>
-          <div className={styles.pote}>
+          <div className={`${styles.pote}`}>
             <Image src={pote} alt="Petit Pote avec son ordi" layout="fill" objectFit="contain" />
           </div>
           <div className={styles.video}>
@@ -79,9 +80,14 @@ const Project = ({ page, projects }) => {
               </a>
             </Link>
           </section>
-          {/* Pote reflexion */}
+          <div className={styles.spacer}>
+            <div className={styles.observateur}>
+              <div className={styles.wrapper}>
+                <Image src={observateur} alt="Pote observateur" layout="fill" objectFit="contain" />
+              </div>
+            </div>
+          </div>
         </main>
-        {/* Footer */}
       </div>
     </>
   );
