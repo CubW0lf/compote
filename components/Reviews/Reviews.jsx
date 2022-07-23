@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Reviews.module.css";
-import pote from "../../public/assets/images/pote_review.png";
+import pote from "../../public/assets/images/potes/pote_review.png";
 import Circle from "../Circle/Circle";
 import { useEffect, useState } from "react";
 import { getAll } from "../../services/directus/utils";
