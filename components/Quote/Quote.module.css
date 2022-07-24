@@ -1,0 +1,61 @@
+.container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background:
+        conic-gradient(from 90deg at 2px 2px,
+            var(--body) 90deg, var(--info) 0) -2px -2px/50px 50px;
+}
+
+.quote {
+    width: 15vw;
+    height: 15vw;
+    position: relative;
+}
+
+.container q {
+    line-height: 1;
+    font-size: 6vw;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.container cite {
+    color: var(--primary);
+    font-size: 5vw;
+    font-weight: 600;
+    margin-bottom: 5vh;
+}
+
+.intello {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(0, -50%);
+}
+
+.wrapper {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+}
+
+@media screen and (min-width:1200px) {
+    .quote {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .container q {
+        font-size: 3vw;
+    }
+
+    .container cite {
+        font-size: 20px;
+        margin-bottom: 10vh;
+    }
+}

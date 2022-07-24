@@ -81,8 +81,8 @@ const Reviews = () => {
         <div className={styles.hundredCircle}></div>
         <div className={styles.percentCircle}>
           <span>100%</span>
+          <span>Com&apos; Pote</span>
         </div>
-        <span>Com&apos; Pote</span>
       </div>
     </div>
   );

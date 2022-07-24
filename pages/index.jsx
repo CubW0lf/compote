@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Landing from "../components/Landing/Landing";
 import Overview from "../components/Overview/Overview";
+import Quote from "../components/Quote/Quote";
 import Reviews from "../components/Reviews/Reviews";
 import styles from "../styles/Home.module.css";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Landing />
         <Overview />
         <Reviews />
+        <Quote />
       </div>
     </>
   );
