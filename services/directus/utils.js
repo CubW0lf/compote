@@ -7,7 +7,7 @@ import directus from "./directus";
  *
  * @param   {[String]}  item  [item to fetch]
  *
- * @return  {[Promise]}        [return response]
+ * @return  {[Promise<JSON>]}        [return response]
  */
 export const getAll = async (item) => {
   return directus
@@ -23,7 +23,7 @@ export const getAll = async (item) => {
  * @param   {[String]}  item  [item to fetch]
  * @param   {[String]}  query  [query to fetch]
  *
- * @return  {[Promise<Object>]}         [return response]
+ * @return  {[Promise<JSON>]}         [return response]
  */
 export const getAllBy = async (item, query) => {
   return directus
@@ -39,13 +39,13 @@ export const getAllBy = async (item, query) => {
  * @param   {[String]}  item  [item type to fetch]
  * @param   {[Number]}  id    [id of the item to fetch]
  *
- * @return  {[Promise<String>]}        [return response]
+ * @return  {[Promise<JSON>]}        [return response]
  */
 export const find = async (item, id) => {
   return await directus
     .items(item)
     .readOne(id, {
-      fields: ["*.*"],
+      fields: ["*.*.*"],
     })
     .then((response) => response)
     .catch((error) => error);
@@ -57,7 +57,7 @@ export const find = async (item, id) => {
  * @param   {[String]}  item    [item type to create]
  * @param   {[Object]}  object  [item to create]
  *
- * @return  {[Promise]}          [return response]
+ * @return  {[Promise<JSON>]}          [return response]
  */
 export const createItem = async (item, object) => {
   return await directus.items(item).createOne(object);
@@ -69,7 +69,7 @@ export const createItem = async (item, object) => {
  * @param   {[String]}  item  [item type to delete]
  * @param   {[Number]}  id    [id of the item to delete]
  *
- * @return  {[Promise]}        [return a responses]
+ * @return  {[Promise<JSON>]}        [return a responses]
  */
 export const deleteItem = async (item, id) => {
   return await directus.items(item).deleteOne(id);
@@ -81,7 +81,7 @@ export const deleteItem = async (item, id) => {
  * @param   {[String]}  item  [item type to update]
  * @param   {[Number]}  id    [id of the item to delete]
  *
- * @return  {[Promise]}        [return Promise]
+ * @return  {[Promise<JSON>]}        [return Promise]
  */
 export const update = async (item, id) => {
   return await directus.items(item).updateOne(id);

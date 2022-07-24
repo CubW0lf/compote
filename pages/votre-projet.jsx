@@ -21,7 +21,6 @@ export async function getStaticProps() {
 }
 
 const Project = ({ page, projects }) => {
-  console.log(projects);
   return (
     <>
       <Head>
@@ -35,9 +34,6 @@ const Project = ({ page, projects }) => {
       <div className={styles.container}>
         <div className={styles.header}>
           <h1>Votre projet, et si on en discutait ?</h1>
-          <div className={styles.banner}>
-            <Image src={quadrillage} alt="" layout="fill" objectFit="cover" />
-          </div>
           <div className={`${styles.pote}`}>
             <Image src={pote} alt="Petit Pote avec son ordi" layout="fill" objectFit="contain" />
           </div>
@@ -61,7 +57,11 @@ const Project = ({ page, projects }) => {
               {page && <h2>{page.title}</h2>}
               {page && <div dangerouslySetInnerHTML={{ __html: page.text }}></div>}
               <div className={styles.cta}>
-                <button>Parlons-en Ensemble</button>
+                <Link href="/contact">
+                  <a>
+                    <button>Parlons-en Ensemble</button>
+                  </a>
+                </Link>
                 <span>On vous offre le café</span>
               </div>
             </article>
@@ -73,8 +73,17 @@ const Project = ({ page, projects }) => {
           </div>
           <section className={styles.examples}>
             <h2>Quelques exemples de réalisations</h2>
-            <div className={styles.grid}>{projects && projects.map((p) => <ProjectTile key={p.id} project={p} />)}</div>
-            <Link href="/">
+            <div className={styles.grid}>
+              {projects &&
+                projects.map((p) => (
+                  <Link href={`projet/${p.id}`} key={p.id}>
+                    <a>
+                      <ProjectTile project={p} />
+                    </a>
+                  </Link>
+                ))}
+            </div>
+            <Link href="/prestations">
               <a>
                 <button className={styles.goToServices}>Voir les prestations sur mesure</button>
               </a>

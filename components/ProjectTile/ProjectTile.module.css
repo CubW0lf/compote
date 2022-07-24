@@ -3,6 +3,7 @@
     width: 20vw;
     height: 20vw;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .container:hover .blind {

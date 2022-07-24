@@ -2,6 +2,7 @@ import styles from "./Quote.module.css";
 import intello from "../../public/assets/images/potes/pote_intello.png";
 import quote from "../../public/assets/images/quote.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Quote = () => {
   return (
@@ -16,7 +17,11 @@ const Quote = () => {
       </q>
       <cite>Proverbe Anglais</cite>
 
-      <button>Et si on travaillait ensemble ?</button>
+      <Link href="/contact">
+        <a>
+          <button>Et si on travaillait ensemble ?</button>
+        </a>
+      </Link>
 
       <div className={styles.intello}>
         <div className={styles.wrapper}>

@@ -2,6 +2,9 @@
     height: 350px;
     width: 100%;
     position: relative;
+    background:
+        conic-gradient(from 90deg at 2px 2px,
+            rgb(221 230 229/ 30%) 90deg, var(--body) 0) -2px -2px/30px 30px;
 }
 
 .header h1 {
@@ -14,12 +17,6 @@
     line-height: 1;
     width: 100%;
     text-align: center;
-}
-
-.banner {
-    height: 100%;
-    width: 100%;
-    position: relative;
 }
 
 .video {
