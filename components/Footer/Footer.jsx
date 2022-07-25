@@ -27,7 +27,7 @@ const Footer = () => {
           <div className={styles.networks}>
             {networks &&
               networks.map((n) => (
-                <a href={n.url} target="_BLANK" rel="noreferrer" key={n.id}>
+                <a href={n.url} target="_BLANK" rel="noreferrer" key={n.id} alt={`Lien vers ${n.name}`}>
                   <DynamicIcon name={n.react_icon} />
                 </a>
               ))}

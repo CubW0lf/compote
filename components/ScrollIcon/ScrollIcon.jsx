@@ -5,7 +5,7 @@ import scroll from "../../public/assets/images/Scroll.png";
 const ScrollIcon = () => {
   return (
     <div className={styles.container}>
-      <a href="#a-propos">
+      <a href="#a-propos" alt="icone de scroll jusqu'à la prochaine section">
         <Image src={scroll} alt="" layout="fill" objectFit="contain" />
       </a>
     </div>
