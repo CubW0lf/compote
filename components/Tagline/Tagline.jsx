@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/assets/images/logo2.png";
+import logo from "../../public/assets/images/logo_light.png";
 import styles from "./Tagline.module.css";
 
 const Tagline = () => {
