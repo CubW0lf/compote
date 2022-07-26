@@ -3,6 +3,7 @@ import { UxWrapper } from "../contexts/uxContext";
 import "../styles/reset.css";
 import "../styles/globals.css";
 import "../styles/swiper.css";
+import "../styles/framework.css";
 
 function MyApp({ Component, pageProps }) {
   return (

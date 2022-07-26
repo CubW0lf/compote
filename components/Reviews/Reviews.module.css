@@ -163,15 +163,13 @@
 }
 
 .percentCircle span {
-    font-weight: 200;
-    font-family: var(--titleFont);
-    font-style: italic;
     font-size: 2vh;
 }
 
 @media screen and (min-width:1200px) {
     .reviews {
         justify-content: center;
+        padding: 2vw;
     }
 
     .reviews h1 {
@@ -182,12 +180,15 @@
         font-size: 2vw;
     }
 
+    .reviewText {
+        margin-top: 2vh;
+    }
+
     .reviewText p {
         font-size: 1.7vw;
     }
 
     .background {
-        justify-content: center;
         margin-top: 0;
     }
 

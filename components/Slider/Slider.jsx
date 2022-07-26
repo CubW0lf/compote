@@ -23,10 +23,9 @@ const Slider = () => {
   return (
     <div className={styles.container}>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
-        navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
         className={styles.slider}

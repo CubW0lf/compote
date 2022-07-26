@@ -63,7 +63,7 @@ const Project = ({ page, projects }) => {
                     <button>Parlons-en Ensemble</button>
                   </a>
                 </Link>
-                <span>On vous offre le café</span>
+                <span className="font">On vous offre le café</span>
               </div>
             </article>
             <div className={styles.cafe}>
@@ -92,8 +92,8 @@ const Project = ({ page, projects }) => {
                 ))}
             </div>
             <Link href="/prestations">
-              <a>
-                <button className={styles.goToServices}>Voir les prestations sur mesure</button>
+              <a className={styles.goToServices}>
+                <button>Voir les prestations sur mesure</button>
               </a>
             </Link>
           </section>

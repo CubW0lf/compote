@@ -3,10 +3,10 @@ import styles from "./Flash.module.css";
 
 const Flash = ({ type, text }) => {
   return (
-    <div className={`${styles.container} ${type}`}>
+    <div className={`${styles.container} ${type} abs-center`}>
       {type === "error" && <MdError className={styles.error} />}
       {type === "success" && <MdDone className={styles.success} />}
-      <p>{text}</p>
+      <p className="body font">{text}</p>
     </div>
   );
 };

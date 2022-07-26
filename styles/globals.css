@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/*
-1. Variables
-2. Blocks
-3. Inline
-4. ID
-5. Classes
-*/
-
 /* 1 Variables */
 
 :root {
@@ -142,43 +134,7 @@ input:-internal-autofill-selected {
   outline: 1px solid var(--primary);
 }
 
-/* 4 ID */
-/* 5 Classes */
-
-.error {
-  color: var(--error);
-  font-weight: 400;
-}
-
-.success {
-  color: var(--success);
-}
-
-div.error {
-  background-color: var(--error);
-}
-
-div.success {
-  background-color: var(--success);
-}
-
-.mobile {
-  display: flex !important;
-}
-
-.not-mobile {
-  display: none !important;
-}
-
 @media screen and (min-width:1200px) {
-
-  .mobile {
-    display: none !important;
-  }
-
-  .not-mobile {
-    display: flex !important;
-  }
 
   p,
   li {

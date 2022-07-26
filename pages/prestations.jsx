@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Services.module.css";
 import pote from "../public/assets/images/potes/pote_polyvalent.png";
 import { getAll } from "../services/directus/utils";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const web = await getAll("web_service");
@@ -69,7 +70,11 @@ const Services = ({ web, photo, video }) => {
               <ul>{video && video.map((v) => <li key={v.id}>{v.name}</li>)}</ul>
             </div>
           </div>
-          <button>Alors Interressé ?</button>
+          <Link href="/contact">
+            <a>
+              <button>Alors Interressé ?</button>
+            </a>
+          </Link>
         </div>
       </div>
     </>

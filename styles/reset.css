@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: var(--font);
 }
 
 *:focus {
@@ -22,7 +23,6 @@ body {
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: var(--font);
     background-color: var(--body);
 }
 

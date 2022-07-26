@@ -80,8 +80,8 @@ const Reviews = () => {
       <div className={styles.hundredContainer}>
         <div className={styles.hundredCircle}></div>
         <div className={styles.percentCircle}>
-          <span>100%</span>
-          <span>Com&apos; Pote</span>
+          <span className="font">100%</span>
+          <span className="font">Com&apos; Pote</span>
         </div>
       </div>
     </div>

@@ -32,9 +32,6 @@
 }
 
 .percent span {
-    font-weight: 200;
-    font-family: var(--titleFont);
-    font-style: italic;
     font-size: 4vh;
 }
 

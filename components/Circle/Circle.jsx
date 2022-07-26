@@ -6,7 +6,7 @@ const Circle = ({ deg }) => {
       <div className={styles.circle}></div>
       <div className={styles.quarter} style={{ transform: `rotate(${deg}deg)` }}></div>
       <div className={styles.percent}>
-        <span>25%</span>
+        <span className="font">25%</span>
       </div>
     </div>
   );

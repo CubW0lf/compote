@@ -1,5 +1,4 @@
 .container {
-    position: absolute;
     width: 90%;
     border-radius: 5px;
     height: 15vh;
@@ -7,9 +6,6 @@
     justify-content: space-around;
     align-items: center;
     z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .container svg {
@@ -20,9 +16,7 @@
 }
 
 .container p {
-    color: white;
     font-size: 4vh;
-    font-family: var(--font);
     font-weight: 500;
 }
 
@@ -33,7 +27,7 @@
 }
 
 .error svg {
-    color: white;
+    color: var(--body);
     filter: drop-shadow(0 0 5px var(--error));
 }
 
@@ -44,6 +38,6 @@
 }
 
 .success svg {
-    color: white;
+    color: var(--body);
     filter: drop-shadow(0 0 5px var(--error));
 }

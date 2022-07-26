@@ -1,0 +1,116 @@
+/* Positionnement */
+
+.abs-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile {
+    display: flex !important;
+}
+
+.not-mobile {
+    display: none !important;
+}
+
+/* couleurs */
+
+.body {
+    color: var(--body);
+}
+
+.body-background {
+    background-color: var(--body);
+}
+
+.dark {
+    color: var(--dark);
+}
+
+.dark-bg {
+    background-color: var(--dark);
+}
+
+.darkBlue {
+    color: var(--darkBlue);
+}
+
+.darkblue-bg {
+    background-color: var(--darkBlue);
+}
+
+.error {
+    color: var(--error);
+    font-weight: 400;
+}
+
+.highlight {
+    color: var(--highlight);
+}
+
+.highlight-bg {
+    background-color: var(--highlight);
+}
+
+
+div.error {
+    background-color: var(--error);
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.primary-bg {
+    background-color: var(--primary);
+}
+
+.success {
+    color: var(--success);
+}
+
+div.success {
+    background-color: var(--success);
+}
+
+/* Font */
+
+.font {
+    font-family: var(--font);
+    font-weight: 200;
+    font-style: italic;
+    line-height: 1;
+}
+
+.titleFont {
+    font-family: var(--titleFont);
+    font-weight: 200;
+    font-style: italic;
+    line-height: 1;
+}
+
+@media screen and (min-width:1200px) {
+
+    .mobile {
+        display: none !important;
+    }
+
+    .not-mobile {
+        display: flex !important;
+    }
+}
