@@ -8,7 +8,7 @@ const Quote = () => {
   return (
     <div className={styles.container}>
       <div className={styles.quote}>
-        <Image src={quote} alt="" layout="fill" objectFit="contain" />
+        <Image src={quote} alt="" layout="fill" objectFit="contain" placeholder="blur" />
       </div>
       <q>
         L&apos;oiseau matinal attrape le ver
@@ -25,7 +25,7 @@ const Quote = () => {
 
       <div className={styles.intello}>
         <div className={styles.wrapper}>
-          <Image src={intello} alt="Pote intello" layout="fill" objectFit="contain" />
+          <Image src={intello} alt="Pote intello" layout="fill" objectFit="contain" placeholder="blur" />
         </div>
       </div>
     </div>

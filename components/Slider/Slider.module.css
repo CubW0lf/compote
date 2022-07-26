@@ -56,8 +56,8 @@
     transition: all 1s;
 }
 
-.background:hover h2 {
-    transform: scale(1.7);
+.background h2:hover {
+    transform: scale(1.2);
     transition: all 1s;
 }
 

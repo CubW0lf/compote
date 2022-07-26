@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MdLanguage } from "react-icons/md";
+import { BiArrowBack } from "react-icons/bi";
 import getAssetURL from "../../services/directus/getAssets";
 import { find, getAll } from "../../services/directus/utils";
 import styles from "../../styles/ProjectSingle.module.css";
@@ -54,6 +56,14 @@ const ProjectSingle = ({ projet }) => {
                   Voir le site <MdLanguage />
                 </button>
               </a>
+              <Link href="/votre-projet#exemples">
+                <a>
+                  <button className={styles.button}>
+                    Retour aux exemples
+                    <BiArrowBack />
+                  </button>
+                </a>
+              </Link>
             </div>
           </main>
           <div className={styles.mockups}>

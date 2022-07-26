@@ -53,6 +53,14 @@
     padding: 2vw;
 }
 
+.article h2 {
+    margin-bottom: 2vh;
+}
+
+.articleContent h3 {
+    margin: 1vh 0;
+}
+
 .cta {
     display: flex;
     flex-direction: column;
@@ -91,12 +99,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2vw 5vw 10vw 5vw;
+    padding: 5vw;
     position: relative;
 }
 
 .examples h2 {
-    font-size: 5vw;
     color: var(--body);
     font-weight: 200;
     font-style: italic;
@@ -105,8 +112,11 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 40vw);
+    justify-content: center;
     gap: 2vw;
+    width: 100vw;
+    padding: 5vw 0;
 }
 
 .goToServices {
@@ -168,5 +178,9 @@
         align-items: center;
         padding: 2vw 5vw 5vw 5vw;
         position: relative;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, 20vw);
     }
 }

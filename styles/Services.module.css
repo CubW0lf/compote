@@ -1,11 +1,106 @@
-.container {
-    padding: 5vw;
+.overview {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.video {
-    background-color: var(--dark);
+.left,
+.right {
+    width: 50%;
+
+}
+
+.left {
+    height: 90vh;
+    padding: 5vw 0 0 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background:
+        conic-gradient(from 90deg at 2px 2px,
+            rgb(221 230 229/ 70%) 90deg, var(--body) 0) -2px -2px/30px 30px;
+    height: 80vh;
+    position: relative;
+}
+
+.iframe {
+    position: absolute;
+    width: 110%;
+    height: 50%;
+    left: 5vw;
+    top: 15vw;
+    z-index: 4;
+}
+
+.absolute {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     width: 70%;
-    height: 500px;
-    margin: 2vh auto;
+    height: 70%;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.services {
+    min-height: 50vh;
+    width: 100%;
+    background-color: var(--darkBlue);
+    position: relative;
+    margin-bottom: 40vh;
+}
+
+.lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5vw 0;
+    height: 40vh;
+}
+
+.lists > div {
+    width: 30vw;
+    height: 100%;
+}
+
+.lists > div:not(:nth-child(3)) {
+    border-right: 3px solid var(--body);
+}
+
+.lists > div h2 {
+    text-align: center;
     color: var(--body);
+}
+
+.lists > div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.lists > div ul li {
+    color: var(--body);
+}
+
+.services button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }

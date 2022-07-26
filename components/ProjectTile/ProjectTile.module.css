@@ -1,14 +1,9 @@
 .container {
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 40vw;
+    height: 40vw;
     overflow: hidden;
     cursor: pointer;
-}
-
-.container:hover .blind {
-    transform: translateY(0);
-    transition: all .4s;
 }
 
 .blind {
@@ -18,7 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-100%);
+    transform: translateY(0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,5 +24,25 @@
 .blind h2 {
     text-align: center;
     line-height: 1;
-    font-size: 30px;
+    font-size: 7vw;
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .container:hover .blind {
+        transform: translateY(0);
+        transition: all .4s;
+    }
+
+    .blind {
+        transform: translateY(-100%);
+    }
+
+    .blind h2 {
+        font-size: 30px;
+    }
 }

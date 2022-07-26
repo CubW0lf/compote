@@ -10,8 +10,12 @@
 .mockup {
     width: 100%;
     height: 40vh;
-    padding: 0 5vw;
+    padding: 0;
     position: relative;
+}
+
+.mockup img {
+    object-fit: cover !important;
 }
 
 .text {
@@ -34,5 +38,9 @@
     .container > div {
         width: 50%;
         height: 80%;
+    }
+
+    .mockup img {
+        object-fit: contain !important;
     }
 }

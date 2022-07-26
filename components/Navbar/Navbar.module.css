@@ -19,17 +19,13 @@
     width: 7vw;
 }
 
-.networkItem {
-    position: relative;
-    width: 1.3vw;
-    height: 1.3vw;
-}
-
 .networkItem a {
     width: 100%;
     height: 100%;
     display: block;
     position: relative;
+    color: var(--primary);
+    font-size: 1.5vw;
 }
 
 @media screen and (min-width:1200px) {

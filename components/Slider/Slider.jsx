@@ -10,6 +10,7 @@ import "swiper/css/autoplay";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Slider.module.css";
+import { shimmer, toBase64 } from "../../services/utils";
 
 const Slider = () => {
   const [slides, setSlides] = useState(null);
@@ -44,6 +45,9 @@ const Slider = () => {
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center center"
+                        priority="true"
+                        placeholder="blur"
+                        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                       />
                     )}
                   </div>

@@ -125,7 +125,7 @@
 
 .reviewText {
     width: 60%;
-    color: var(--highlight);
+    color: var(--body);
     text-align: center;
 }
 

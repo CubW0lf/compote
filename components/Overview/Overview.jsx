@@ -16,7 +16,7 @@ const Overview = () => {
   return (
     <div className={styles.container} id="a-propos">
       <div className={styles.mockup}>
-        <Image src={mockup} alt="" layout="fill" objectFit="contain" />
+        <Image src={mockup} alt="" layout="fill" objectFit="contain" placeholder="blur" />
       </div>
       <div className={styles.text}>
         <h1>{page && page.title}</h1>

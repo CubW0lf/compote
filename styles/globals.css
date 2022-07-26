@@ -44,8 +44,8 @@ li {
 
 h1 {
   color: var(--primary);
-  font-size: 50px;
-  line-height: 115.7%;
+  font-size: 7vw;
+  line-height: 1;
   font-family: var(--titleFont);
   font-weight: 200;
   font-style: italic;
@@ -55,7 +55,7 @@ h2 {
   color: var(--dark);
   font-family: var(--titleFont);
   font-size: 7vw;
-  line-height: 137.72%;
+  line-height: 1;
   font-weight: 200;
   font-style: italic;
 }

@@ -15,6 +15,7 @@
     border-radius: 4px;
     height: 80vh;
     overflow-y: scroll;
+    width: 90vw;
 }
 
 .backdrop {
@@ -27,4 +28,10 @@
     top: 0;
     left: 0;
     cursor: pointer;
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        width: 50vw;
+    }
 }

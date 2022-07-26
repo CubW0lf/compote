@@ -10,7 +10,7 @@ const Tagline = () => {
       <Link href="/">
         <a>
           <div className={styles.logo}>
-            <Image src={logo} alt="Logo de ComPote" layout="responsive" priority="true" />
+            <Image src={logo} alt="Logo de ComPote" layout="responsive" priority="true" placeholder="blur" />
           </div>
         </a>
       </Link>

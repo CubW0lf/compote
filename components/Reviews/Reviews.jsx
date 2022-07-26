@@ -53,7 +53,7 @@ const Reviews = () => {
         </Swiper>
         <div className={styles.absolute}>
           <div className={styles.pote}>
-            <Image src={pote} alt="" layout="fill" objectFit="contain" objectPosition="left" />
+            <Image src={pote} alt="" layout="fill" objectFit="contain" objectPosition="left" placeholder="blur" />
           </div>
         </div>
       </div>

@@ -63,77 +63,11 @@
   position: relative;
 }
 
-.inputContainer {
-  outline: 1px solid var(--primary);
-  border-radius: 15px;
-  width: 100%;
-  height: 6vh;
-  position: relative;
-}
-
-.inputContainer p {
-  position: absolute;
-  right: 5vw;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .column:nth-child(2) p {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.label {
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(5%, -50%);
-  padding: 0 0.5vw;
-  color: var(--dark);
-}
-
-.textarea {
-  height: 100%;
-  width: 100%;
-  line-height: 130%;
-  padding: 5vw;
-  color: var(--text);
-  outline: 1px solid var(--primary);
-}
-
-.mark {
-  position: absolute;
-  right: 2vw;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: var(--success);
-  height: 3vh;
-  width: 3vh;
-  padding: 0.5vh;
-}
-
-.mark polyline {
-  stroke: white;
-}
-
-.markText {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translate(50%, -50%);
-  border-radius: 50%;
-  background-color: var(--success);
-  height: 3vh;
-  width: 3vh;
-  padding: 0.5vh;
-}
-
-.markText polyline {
-  stroke: white;
 }
 
 .submit {
@@ -190,6 +124,8 @@
 .toggle {
   width: 10vh;
   border-radius: 5vh;
+  -webkit-border-radius: 5vh;
+  -moz-border-radius: 5vh;
   height: 5vh;
   outline: 1px solid var(--primary);
   cursor: pointer;
@@ -244,24 +180,11 @@
     transform: translate(-50%, -50%);
   }
 
-  .inputContainer {
-    outline: 1px solid var(--primary);
-    border-radius: 15px;
-    width: 100%;
-    position: relative;
-    padding: 0;
-  }
-
-  .inputContainer p {
-    position: absolute;
-    right: 1vw;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
   .toggle {
     width: 4vh;
     border-radius: 2vh;
+    -webkit-border-radius: 2vh;
+    -moz-border-radius: 2vh;
     height: 2vh;
   }
 

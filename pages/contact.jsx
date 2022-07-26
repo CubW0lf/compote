@@ -1,25 +1,24 @@
-import { GrCheckmark } from "react-icons/gr";
 import styles from "../styles/Contact.module.css";
 import { useForm } from "react-hook-form";
 import { createItem, find } from "../services/directus/utils";
 import { useUxContext } from "../contexts/uxContext";
 import Flash from "../components/Flash/Flash";
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import Modal from "../components/Modal/Modal";
-import Checkbox from "../components/Checkbox/Checkbox";
 import { FaCircle } from "react-icons/fa";
+import Input from "../components/Input/Input";
 
-const Contact = () => {
+export async function getStaticProps() {
+  const policy = await find("page", 1);
+  return {
+    props: {
+      policy: policy,
+    },
+  };
+}
+
+const Contact = ({ policy }) => {
   const { flash, flashType, handleFlash, modalVisible, toggleModalVisibility } = useUxContext();
-
-  const [confidentiality, setConfidentiality] = useState(null);
-
-  useEffect(() => {
-    find("page", 1)
-      .then((response) => setConfidentiality(response))
-      .catch((err) => console.log(err));
-  }, []);
 
   const {
     register,
@@ -57,72 +56,64 @@ const Contact = () => {
           <h3>Remplissez ce formulaire et je vous recontacterai au plus vite</h3>
           <div className={styles.formContainer}>
             <div className={styles.column}>
-              <div className={styles.inputContainer}>
-                <input
-                  type="text"
-                  placeholder="Louis"
-                  id="firstname"
-                  defaultValue=""
-                  {...register("firstname", { required: true, minLength: 3, maxLength: 20 })}
-                />
-                {dirtyFields.firstname && !errors.firstname && <GrCheckmark className={styles.mark} />}
-                <label htmlFor="firstname" className={styles.label}>
-                  Prénom
-                </label>
-                {errors.firstname?.type === "required" && <p className="error">Requis</p>}
-                {errors.firstname?.type === "minLength" && <p className="error">Au moins 3 caractères</p>}
-                {errors.firstname?.type === "maxLength" && <p className="error">Moins de 20 caractères</p>}
-              </div>
-              <div className={styles.inputContainer}>
-                <input
-                  type="text"
-                  placeholder="De Funès"
-                  id="lastname"
-                  defaultValue=""
-                  {...register("lastname", { required: true, minLength: 3, maxLength: 20 })}
-                />
-                {dirtyFields.lastname && !errors.lastname && <GrCheckmark className={styles.mark} />}
-                <label htmlFor="lastname" className={styles.label}>
-                  Nom
-                </label>
-                {errors.lastname?.type === "required" && <p className="error">Requis</p>}
-                {errors.lastname?.type === "minLength" && <p className="error">Au moins 3 caractères</p>}
-                {errors.lastname?.type === "maxLength" && <p className="error">Moins de 20 caractères</p>}
-              </div>
-              <div className={styles.inputContainer}>
-                <input
-                  type="text"
-                  placeholder="gendarme@stropez.fr"
-                  defaultValue=""
-                  {...register("email", {
-                    required: true,
-                    pattern: {
-                      value:
-                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                    },
-                  })}
-                  id="email"
-                  className={watch("email") === "" ? "empty" : ""}
-                />
-                {dirtyFields.email && !errors.email && <GrCheckmark className={styles.mark} />}
-                <label htmlFor="email" className={styles.label}>
-                  Email
-                </label>
-                {errors.email?.type === "pattern" && <p className="error">nom@domain.extension</p>}
-                {errors.email?.type === "required" && <p className="error">Requis</p>}
-              </div>
+              <Input
+                {...register("firstname", {
+                  required: { value: true, message: "Requis" },
+                  minLength: { value: 3, message: "Au moins 3 caractères" },
+                  maxLength: { value: 20, message: "Maximum 20 caractères" },
+                })}
+                error={errors.firstname}
+                dirty={dirtyFields.firstname}
+                label="Prénom"
+                id="firstname"
+                placeholder="Louis"
+                defaultValue=""
+              />
+              <Input
+                {...register("lastname", {
+                  required: { value: true, message: "Requis" },
+                  minLength: { value: 3, message: "Au moins 3 caractères" },
+                  maxLength: { value: 20, message: "Maximum 20 caractères" },
+                })}
+                error={errors.lastname}
+                dirty={dirtyFields.lastname}
+                label="Nom"
+                id="lastname"
+                placeholder="De Funès"
+                defaultValue=""
+              />
+
+              <Input
+                {...register("email", {
+                  required: { value: true, message: "Requis" },
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "nom@domain.extension",
+                  },
+                })}
+                error={errors.email}
+                dirty={dirtyFields.email}
+                label="Email"
+                id="email"
+                placeholder="gendarme@stropez.fr"
+                defaultValue=""
+              />
             </div>
 
             <div className={styles.column}>
-              <textarea
-                className={styles.textarea}
+              <Input
+                {...register("message", {
+                  required: { value: true, message: "Requis" },
+                })}
+                error={errors.message}
+                dirty={dirtyFields.message}
+                type="textarea"
+                label="Message"
                 id="message"
-                defaultValue=""
                 placeholder="Votre Message"
-                {...register("message", { required: true })}
-              ></textarea>
-              {dirtyFields.message && !errors.message && <GrCheckmark className={styles.markText} />}
-              {errors.message?.type === "required" && <p className="error">Requis</p>}
+                defaultValue=""
+              />
             </div>
           </div>
           <div className={styles.policy}>
@@ -148,7 +139,7 @@ const Contact = () => {
         </form>
         {flash && <Flash type={flashType} text={flash} />}
       </div>
-      <Modal content={confidentiality} />
+      {policy && <Modal content={policy} />}
     </>
   );
 };

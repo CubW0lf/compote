@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getAll } from "../../services/directus/utils";
 import getAssetURL from "../../services/directus/getAssets";
 import Tagline from "../Tagline/Tagline";
+import DynamicIcon from "../DynamicIcon/DynamicIcon";
 
 const Navbar = () => {
   const [networks, setNetworks] = useState(null);
@@ -25,8 +26,8 @@ const Navbar = () => {
         {networks &&
           networks.map((n) => (
             <li key={n.id} className={styles.networkItem}>
-              <a href={n.url} target="_blank" rel="noreferrer">
-                {n.logo && <Image src={getAssetURL(n.logo.id)} alt="" layout="fill" objectFit="contain" />}
+              <a href={n.url} target="_blank" rel="noreferrer" alt={`Lien vers ${n.name}`}>
+                {n && <DynamicIcon name={n.react_icon} />}
               </a>
             </li>
           ))}
