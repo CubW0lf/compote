@@ -1,0 +1,26 @@
+.container {
+    padding: 5vw;
+    min-height: 90vh;
+}
+
+.article {
+    padding-top: 10vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2vw 0;
+}
+
+.grid > div {
+    padding: 1vw;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.feature {
+    font-weight: 200;
+}

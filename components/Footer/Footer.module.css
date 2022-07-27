@@ -94,6 +94,8 @@
 
     .top ol li span {
         left: 10px;
+        color: var(--info);
+        font-weight: 600;
     }
 
     .top ol li::marker {

@@ -4,6 +4,7 @@ import styles from "./Footer.module.css";
 import { IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { BsTelephoneFill } from "react-icons/bs";
 import DynamicIcon from "../DynamicIcon/DynamicIcon";
+import Link from "next/link";
 
 const Footer = () => {
   const [infos, setInfos] = useState(null);
@@ -25,13 +26,25 @@ const Footer = () => {
         <div className={styles.left}>
           <ol>
             <li>
-              <span>Outils &amp; technologies Web</span>
+              <Link href="/materiel#web">
+                <a>
+                  <span>Outils &amp; technologies Web</span>
+                </a>
+              </Link>
             </li>
             <li>
-              <span>Materiel Photo</span>
+              <Link href="/materiel#photo">
+                <a>
+                  <span>Materiel Photo</span>
+                </a>
+              </Link>
             </li>
             <li>
-              <span>Materiel Vidéo</span>
+              <Link href="/materiel#video">
+                <a>
+                  <span>Materiel Video</span>
+                </a>
+              </Link>
             </li>
           </ol>
         </div>
