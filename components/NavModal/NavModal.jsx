@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "./NavModal.module.css";
 import { useUxContext } from "../../contexts/uxContext";
-import ToggleMenuIcon from "../ToggleMenuIcon/ToggleMenuIcon";
 import { Dialog } from "@headlessui/react";
 import { useRef } from "react";
 
@@ -42,7 +41,7 @@ const NavModal = () => {
           </li>
 
           <li className={menuVisible ? styles.enter : styles.leave} onClick={() => toggleMenuVisibility(false)}>
-            <Link href="/">
+            <Link href="/a-propos">
               <a>
                 <span>A propos</span>
               </a>

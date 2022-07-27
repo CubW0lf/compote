@@ -22,7 +22,19 @@ const Footer = () => {
   return (
     <footer className={styles.container}>
       <div className={styles.top}>
-        <div className={styles.left}></div>
+        <div className={styles.left}>
+          <ol>
+            <li>
+              <span>Outils &amp; technologies Web</span>
+            </li>
+            <li>
+              <span>Materiel Photo</span>
+            </li>
+            <li>
+              <span>Materiel Vidéo</span>
+            </li>
+          </ol>
+        </div>
         <div className={styles.right}>
           <div className={styles.networks}>
             {networks &&
@@ -32,17 +44,19 @@ const Footer = () => {
                 </a>
               ))}
           </div>
-          <div className={styles.infoItem}>
-            <IoLocationSharp />
-            <span>{infos && infos.adress}</span>
-          </div>
-          <div className={styles.infoItem}>
-            <BsTelephoneFill />
-            <span>{infos && infos.phone}</span>
-          </div>
-          <div className={styles.infoItem}>
-            <IoMailSharp />
-            <span>{infos && infos.email}</span>
+          <div className={styles.infos}>
+            <div className={styles.infoItem}>
+              <IoLocationSharp />
+              <span>{infos && infos.adress}</span>
+            </div>
+            <div className={styles.infoItem}>
+              <BsTelephoneFill />
+              <span>{infos && infos.phone.match(/(.{1,2})/g).join(" ")}</span>
+            </div>
+            <div className={styles.infoItem}>
+              <IoMailSharp />
+              <span>{infos && infos.email}</span>
+            </div>
           </div>
         </div>
       </div>

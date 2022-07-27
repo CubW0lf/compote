@@ -47,7 +47,7 @@ const Services = ({ web, photo, video }) => {
               ></iframe>
             </div>
           </div>
-          <div className={styles.right}>
+          <div className={`${styles.right} not-mobile`}>
             <div className={styles.absolute}>
               <div className={styles.wrapper}>
                 <Image src={pote} alt="Pote Polyvalent" layout="fill" objectFit="contain" placeholder="blur" />
@@ -59,15 +59,36 @@ const Services = ({ web, photo, video }) => {
           <div className={styles.lists}>
             <div className={styles.web}>
               <h2>Web</h2>
-              <ul>{web && web.map((w) => <li key={w.id}>{w.name}</li>)}</ul>
+              <ol>
+                {web &&
+                  web.map((w) => (
+                    <li key={w.id}>
+                      <span>{w.name}</span>
+                    </li>
+                  ))}
+              </ol>
             </div>
             <div className={styles.photo}>
               <h2>Photo</h2>
-              <ul>{photo && photo.map((p) => <li key={p.id}>{p.name}</li>)}</ul>
+              <ol>
+                {photo &&
+                  photo.map((p) => (
+                    <li key={p.id}>
+                      <span>{p.name}</span>
+                    </li>
+                  ))}
+              </ol>
             </div>
             <div className={styles.video}>
               <h2>Vidéo</h2>
-              <ul>{video && video.map((v) => <li key={v.id}>{v.name}</li>)}</ul>
+              <ol>
+                {video &&
+                  video.map((v) => (
+                    <li key={v.id}>
+                      <span>{v.name}</span>
+                    </li>
+                  ))}
+              </ol>
             </div>
           </div>
           <Link href="/contact">

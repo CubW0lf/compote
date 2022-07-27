@@ -53,7 +53,7 @@ const Contact = ({ policy }) => {
         <h1>Contact</h1>
         <form className={styles.form} onSubmit={handleSubmit(submit)}>
           <h2>Une Question, besoin d&apos;un devis ?</h2>
-          <h3>Remplissez ce formulaire et je vous recontacterai au plus vite</h3>
+          <p>Remplissez ce formulaire et je vous recontacterai au plus vite</p>
           <div className={styles.formContainer}>
             <div className={styles.column}>
               <Input

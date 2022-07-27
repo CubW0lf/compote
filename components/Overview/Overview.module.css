@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     position: relative;
 }
 
@@ -16,10 +15,11 @@
 
 .mockup img {
     object-fit: cover !important;
+    object-position: top right;
 }
 
 .text {
-    padding: 5vw;
+    padding: 2vw 5vw;
     width: 100%;
     height: auto;
     position: relative;
@@ -32,15 +32,21 @@
 @media screen and (min-width:1200px) {
     .container {
         flex-direction: row;
+        align-items: flex-start;
         padding: 10vh 0 0 0;
     }
 
     .container > div {
         width: 50%;
-        height: 80%;
+        height: 90vh;
+    }
+
+    .mockup {
+        height: 80vh !important;
     }
 
     .mockup img {
-        object-fit: contain !important;
+        object-fit: cover !important;
+        object-position: top right;
     }
 }

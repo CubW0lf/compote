@@ -5,32 +5,22 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 6vh 5vw 5vw 5vw;
+  padding: 2vh 5vw 5vw 5vw;
   width: 100%;
   height: auto;
 }
 
 .form {
   width: 100%;
+  margin-top: 2vh;
 }
 
 .form a {
   cursor: zoom-in;
 }
 
-.form h2 {
-  color: var(--dark);
-  font-size: 2.5vh;
-  width: 100%;
-  text-align: left;
-}
-
-.form h3 {
-  color: var(--dark);
-  font-size: 1.5vh;
-  margin-top: 1vh;
-  width: 100%;
-  text-align: left;
+.form p {
+  line-height: 1;
 }
 
 .formContainer {
@@ -60,11 +50,8 @@
   position: relative;
 }
 
-.column:nth-child(2) p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.column:nth-child(2) {
+  margin-top: 2vh;
 }
 
 .submit {
@@ -124,7 +111,7 @@
   -webkit-border-radius: 5vh;
   -moz-border-radius: 5vh;
   height: 5vh;
-  outline: 1px solid var(--primary);
+  border: 1px solid var(--primary);
   cursor: pointer;
   transition: all .4s;
   position: relative;
@@ -148,6 +135,7 @@
 @media screen and (min-width: 1200px) {
   .container {
     height: 90vh;
+    padding: 6vh 5vw 5vw 5vw;
   }
 
   .formContainer {
@@ -168,24 +156,18 @@
     justify-content: center;
     align-items: center;
     position: relative;
-  }
-
-  .column:nth-child(2) p {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 0;
   }
 
   .toggle {
-    width: 4vh;
-    border-radius: 2vh;
-    -webkit-border-radius: 2vh;
-    -moz-border-radius: 2vh;
-    height: 2vh;
+    width: 4rem;
+    border-radius: 4rem;
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    height: 2rem;
   }
 
   .toggle svg {
-    font-size: 2vh;
+    font-size: 2rem;
   }
 }

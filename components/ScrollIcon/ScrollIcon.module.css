@@ -1,8 +1,10 @@
 .container {
-    position: absolute;
-    bottom: 3vh;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
 }
 
 .container a {
@@ -14,17 +16,8 @@
 
 @media screen and (min-width:1200px) {
 
-    .container {
-        position: absolute;
-        bottom: 2vh;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
     .container a {
         width: 2vw;
         height: 4vw;
-        display: block;
-        position: relative;
     }
 }

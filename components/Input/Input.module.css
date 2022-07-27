@@ -88,4 +88,8 @@
         top: 50%;
         transform: translateY(-50%);
     }
+
+    .textarea {
+        padding: 2vw;
+    }
 }

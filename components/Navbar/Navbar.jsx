@@ -1,9 +1,7 @@
-import Image from "next/image";
 import styles from "./Navbar.module.css";
 import ToggleMenuIcon from "../ToggleMenuIcon/ToggleMenuIcon";
 import { useEffect, useState } from "react";
 import { getAll } from "../../services/directus/utils";
-import getAssetURL from "../../services/directus/getAssets";
 import Tagline from "../Tagline/Tagline";
 import DynamicIcon from "../DynamicIcon/DynamicIcon";
 
@@ -17,7 +15,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={styles.container}>
+    <header className={styles.container}>
       <ToggleMenuIcon />
 
       <Tagline />
@@ -32,7 +30,7 @@ const Navbar = () => {
             </li>
           ))}
       </ul>
-    </nav>
+    </header>
   );
 };
 

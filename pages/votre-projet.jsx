@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Project.module.css";
-import quadrillage from "../public/assets/images/quadrillage.png";
+import { find, getAll } from "../services/directus/utils";
+import { shimmer, toBase64 } from "../services/utils";
+import ProjectTile from "../components/ProjectTile/ProjectTile";
 import pote from "../public/assets/images/potes/pote_ordi.png";
 import observateur from "../public/assets/images/potes/pote_observateur.png";
-import { find, getAll } from "../services/directus/utils";
 import cafe from "../public/assets/images/potes/pote_cafe.png";
-import ProjectTile from "../components/ProjectTile/ProjectTile";
-import { shimmer, toBase64 } from "../services/utils";
+import styles from "../styles/Project.module.css";
 
 export async function getStaticProps() {
   const page = await find("page", 3);
@@ -34,7 +33,11 @@ const Project = ({ page, projects }) => {
       </Head>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>Votre projet, et si on en discutait ?</h1>
+          <h1>
+            Votre projet,
+            <br />
+            et si on en discutait ?
+          </h1>
           <div className={`${styles.pote}`}>
             <Image src={pote} alt="Petit Pote avec son ordi" layout="fill" objectFit="contain" placeholder="blur" />
           </div>
