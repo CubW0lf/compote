@@ -28,7 +28,7 @@ const Footer = () => {
             <li>
               <Link href="/materiel#web">
                 <a>
-                  <span>Outils &amp; technologies Web</span>
+                  <span>Technologies Web</span>
                 </a>
               </Link>
             </li>

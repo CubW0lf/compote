@@ -2,7 +2,8 @@ import Head from "next/head";
 import Landing from "../components/Landing/Landing";
 import Overview from "../components/Overview/Overview";
 import Quote from "../components/Quote/Quote";
-import Reviews from "../components/Reviews/Reviews";
+import dynamic from "next/dynamic";
+const Reviews = dynamic(() => import("../components/Reviews/Reviews"), { ssr: false });
 import { find, getAll } from "../services/directus/utils";
 import styles from "../styles/Home.module.css";
 

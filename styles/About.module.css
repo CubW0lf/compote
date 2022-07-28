@@ -1,4 +1,50 @@
 .container {
-    padding: 5vw;
     min-height: 90vh;
+}
+
+.article_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.aside {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.aside img {
+    object-fit: cover;
+}
+
+.article {
+    padding: 5vw;
+}
+
+@media screen and (min-width:1200px) {
+    .article_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .aside,
+    .article {
+        width: 50%;
+    }
+
+    .aside img {
+        object-fit: contain;
+    }
+
+    .aside {
+        height: 90vh;
+    }
+
+    .article {
+        padding: 3vw 2vw;
+    }
 }

@@ -4,9 +4,13 @@ import { createItem, find } from "../services/directus/utils";
 import { useUxContext } from "../contexts/uxContext";
 import Flash from "../components/Flash/Flash";
 import Head from "next/head";
-import Modal from "../components/Modal/Modal";
+import dynamic from "next/dynamic";
+const Modal = dynamic(() => import("../components/Modal/Modal"), { ssr: false });
 import { FaCircle } from "react-icons/fa";
 import Input from "../components/Input/Input";
+import Image from "next/image";
+import pote from "../public/assets/images/potes/pote_facteur.png";
+import plane from "../public/assets/images/plane.png";
 
 export async function getStaticProps() {
   const policy = await find("page", 1);
@@ -50,9 +54,16 @@ const Contact = ({ policy }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <h1>Contact</h1>
+        <h1>
+          Contact : Bienvenue à la Com&apos; Po(s)te
+          <div className={styles.plane}>
+            <div className={styles.planeWrapper}>
+              <Image src={plane} alt="" layout="fill" objectFit="contain" objectPosition="top left" />
+            </div>
+          </div>
+        </h1>
+        <h2>Si vous souhaitez me contacter, pour une question, un projet, une demande de devis... c’est par ici !</h2>
         <form className={styles.form} onSubmit={handleSubmit(submit)}>
-          <h2>Une Question, besoin d&apos;un devis ?</h2>
           <p>Remplissez ce formulaire et je vous recontacterai au plus vite</p>
           <div className={styles.formContainer}>
             <div className={styles.column}>
@@ -138,6 +149,11 @@ const Contact = ({ policy }) => {
           </button>
         </form>
         {flash && <Flash type={flashType} text={flash} />}
+        <div className={styles.pote}>
+          <div className={styles.wrapper}>
+            <Image src={pote} alt="Petit pote facteur" layout="fill" objectFit="contain" />
+          </div>
+        </div>
       </div>
       {policy && <Modal content={policy} />}
     </>

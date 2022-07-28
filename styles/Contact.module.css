@@ -10,6 +10,14 @@
   height: auto;
 }
 
+.container h1 {
+  position: relative;
+}
+
+.container h2 {
+  display: none;
+}
+
 .form {
   width: 100%;
   margin-top: 2vh;
@@ -132,10 +140,46 @@
   width: 100%;
 }
 
+.pote {
+  position: absolute;
+  bottom: -10%;
+  right: 10%;
+}
+
+.wrapper {
+  position: relative;
+  width: 20vw;
+  height: 30vh;
+}
+
+.plane {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.planeWrapper {
+  position: relative;
+  width: 10vw;
+  height: 20vh;
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     height: 90vh;
-    padding: 6vh 5vw 5vw 5vw;
+    padding: 10vh 5vw 5vw 5vw;
+  }
+
+  .container h2 {
+    font-family: var(--font);
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2vw;
+    text-transform: none;
+    letter-spacing: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
   }
 
   .formContainer {
@@ -169,5 +213,18 @@
 
   .toggle svg {
     font-size: 2rem;
+  }
+
+  .pote {
+    position: absolute;
+    bottom: -5%;
+    right: auto;
+  }
+
+  .plane {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -25%);
   }
 }

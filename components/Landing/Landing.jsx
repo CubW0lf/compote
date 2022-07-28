@@ -1,5 +1,6 @@
 import ScrollIcon from "../ScrollIcon/ScrollIcon";
-import Slider from "../Slider/Slider";
+import dynamic from "next/dynamic";
+const Slider = dynamic(() => import("../Slider/Slider"), { ssr: false });
 import styles from "./Landing.module.css";
 
 const Landing = ({ slides }) => {

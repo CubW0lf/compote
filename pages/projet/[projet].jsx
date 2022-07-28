@@ -25,7 +25,6 @@ export async function getStaticProps(context) {
     props: {
       projet,
     },
-    revalidate: 30,
   };
 }
 

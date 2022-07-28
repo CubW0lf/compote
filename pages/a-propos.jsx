@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { find } from "../services/directus/utils";
+import moi from "../public/assets/images/moi.jpg";
 import styles from "../styles/About.module.css";
 
 export async function getStaticProps() {
@@ -26,6 +28,9 @@ const About = ({ page }) => {
       <div className={styles.container}>
         <main>
           <div className={styles.article_wrapper}>
+            <aside className={styles.aside}>
+              <Image src={moi} alt="" layout="fill" objectPosition="top left" />
+            </aside>
             <article className={styles.article}>
               {page && <h1>{page.title}</h1>}
               {page && <div dangerouslySetInnerHTML={{ __html: page.text }} className={styles.articleContent}></div>}

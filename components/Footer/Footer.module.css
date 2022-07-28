@@ -17,8 +17,8 @@
     padding: 2vw 5vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .right {
@@ -75,6 +75,22 @@
     padding: 2vh 0;
 }
 
+.top ol li {
+    text-align: right;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.top ol li span {
+    left: 10px;
+    color: var(--info);
+    font-weight: 600;
+}
+
+.top ol li::marker {
+    color: var(--body);
+}
+
 @media screen and (min-width:1200px) {
     .top {
         height: 230px;
@@ -82,29 +98,11 @@
         justify-content: center;
     }
 
-    .top ol {
-        width: 50%;
-    }
-
-    .top ol li {
-        text-align: left;
-        line-height: 1;
-        margin-bottom: 10px;
-    }
-
-    .top ol li span {
-        left: 10px;
-        color: var(--info);
-        font-weight: 600;
-    }
-
-    .top ol li::marker {
-        color: var(--body);
-    }
-
     .left {
         width: 50%;
         height: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
 
     .right {
