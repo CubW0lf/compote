@@ -16,7 +16,6 @@ export async function getStaticProps() {
 }
 
 const Tools = ({ tools, photo, video }) => {
-  console.log(tools);
   return (
     <>
       <Head>
