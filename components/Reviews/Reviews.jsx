@@ -2,8 +2,6 @@ import Image from "next/image";
 import styles from "./Reviews.module.css";
 import pote from "../../public/assets/images/potes/pote_review.png";
 import Circle from "../Circle/Circle";
-import { useEffect, useState } from "react";
-import { getAll } from "../../services/directus/utils";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import quote from "../../public/assets/images/quote.png";
@@ -12,15 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-const Reviews = () => {
-  const [reviews, setReviews] = useState();
-
-  useEffect(() => {
-    getAll("review")
-      .then((response) => setReviews(response))
-      .catch((err) => console.log(err));
-  }, []);
-
+const Reviews = ({ reviews }) => {
   return (
     <div className={styles.container}>
       <div className={styles.reviews}>

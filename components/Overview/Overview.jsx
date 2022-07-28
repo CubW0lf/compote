@@ -1,18 +1,8 @@
 import styles from "./Overview.module.css";
 import mockup from "../../public/assets/images/about.png";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { find } from "../../services/directus/utils";
 
-const Overview = () => {
-  const [page, setPage] = useState(null);
-
-  useEffect(() => {
-    find("page", 2)
-      .then((response) => setPage(response))
-      .catch((err) => console.log(err));
-  }, []);
-
+const Overview = ({ page }) => {
   return (
     <div className={styles.container} id="a-propos">
       <div className={styles.mockup}>

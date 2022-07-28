@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
-import { getAll } from "../../services/directus/utils";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import getAssetURL from "../../services/directus/getAssets";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,14 +10,7 @@ import Image from "next/image";
 import styles from "./Slider.module.css";
 import { shimmer, toBase64 } from "../../services/utils";
 
-const Slider = () => {
-  const [slides, setSlides] = useState(null);
-
-  useEffect(() => {
-    getAll("slide")
-      .then((response) => setSlides(response))
-      .catch((err) => console.log(err));
-  }, []);
+const Slider = ({ slides }) => {
   return (
     <div className={styles.container}>
       <Swiper
