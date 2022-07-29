@@ -3,7 +3,11 @@ import ToggleMenuIcon from "../ToggleMenuIcon/ToggleMenuIcon";
 import { useEffect, useState } from "react";
 import { getAll } from "../../services/directus/utils";
 import Tagline from "../Tagline/Tagline";
-import DynamicIcon from "../DynamicIcon/DynamicIcon";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+const DynamicIcon = dynamic(() => import("../DynamicIcon/DynamicIcon"), {
+  suspense: true,
+});
 
 const Navbar = () => {
   const [networks, setNetworks] = useState(null);
@@ -25,7 +29,11 @@ const Navbar = () => {
           networks.map((n) => (
             <li key={n.id} className={styles.networkItem}>
               <a href={n.url} target="_blank" rel="noreferrer" alt={`Lien vers ${n.name}`}>
-                {n && <DynamicIcon name={n.react_icon} />}
+                {n && (
+                  <Suspense fallback={`Loading...`}>
+                    <DynamicIcon name={n.react_icon} />
+                  </Suspense>
+                )}
               </a>
             </li>
           ))}

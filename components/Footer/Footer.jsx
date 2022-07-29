@@ -3,7 +3,11 @@ import { find, getAll } from "../../services/directus/utils";
 import styles from "./Footer.module.css";
 import { IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { BsTelephoneFill } from "react-icons/bs";
-import DynamicIcon from "../DynamicIcon/DynamicIcon";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+const DynamicIcon = dynamic(() => import("../DynamicIcon/DynamicIcon"), {
+  suspense: true,
+});
 import Link from "next/link";
 
 const Footer = () => {
@@ -53,7 +57,9 @@ const Footer = () => {
             {networks &&
               networks.map((n) => (
                 <a href={n.url} target="_BLANK" rel="noreferrer" key={n.id} alt={`Lien vers ${n.name}`}>
-                  <DynamicIcon name={n.react_icon} />
+                  <Suspense fallback={`Loading...`}>
+                    <DynamicIcon name={n.react_icon} />
+                  </Suspense>
                 </a>
               ))}
           </div>
