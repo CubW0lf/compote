@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { useCallback, useState } from "react";
 import { createContext, useContext } from "react";
 
@@ -9,8 +8,6 @@ export const UxWrapper = ({ children }) => {
   const [flashType, setFlashType] = useState("");
   const [menuVisible, toggleMenuVisibility] = useState(false);
   const [modalVisible, toggleModalVisibility] = useState(false);
-
-  const router = useRouter();
 
   /**
    * deleteMessage - delete the current FlashMessage
