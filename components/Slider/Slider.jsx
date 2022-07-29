@@ -11,9 +11,13 @@ const Slider = ({ slides }) => {
   const [currentStyle, setCurrentStyle] = useState(null);
 
   /* State pour drag and drop */
-  const [initialPos, setInitialPos] = useState(null);
+  const [initialPos, setInitialPos] = useState(0);
   const [finalPos, setFinalPos] = useState(null);
+  const [isGrabbing, toggleGrabbing] = useState(false);
 
+  /* state pour touchevent */
+  const [initialTouch, setInitialTouch] = useState(0);
+  const [finalTouch, setFinalTouch] = useState(0);
   const slidesContainer = useRef(null);
 
   /* On déclare les constantes utiles au Slider */
@@ -24,6 +28,31 @@ const Slider = ({ slides }) => {
   const dragStart = (e) => {
     e.preventDefault();
     setInitialPos(e.clientX);
+    toggleGrabbing(true);
+  };
+
+  const touchStart = (e) => {
+    setInitialTouch(e.targetTouches[0].clientX);
+  };
+
+  const touchMove = (e) => {
+    if (initialTouch !== null) {
+      setFinalTouch(e.targetTouches[0].clientX);
+    }
+    console.log(finalTouch);
+  };
+
+  const touchEnd = (e) => {
+    if (initialTouch - finalTouch > 0) {
+      moveSlides(1);
+    } else if (initialTouch - finalTouch < 0) {
+      moveSlides(-1);
+    } else {
+      moveSlides(0);
+    }
+
+    setInitialTouch(0);
+    setFinalTouch(0);
   };
 
   const handleMouseMove = (e) => {
@@ -44,7 +73,7 @@ const Slider = ({ slides }) => {
   };
 
   const dragEnd = () => {
-    setFinalPos(slidesContainer.current.offsetLeft);
+    // setFinalPos(slidesContainer.current.offsetLeft);
 
     if (initialPos - finalPos > 0) {
       moveSlides(1);
@@ -56,6 +85,7 @@ const Slider = ({ slides }) => {
 
     setInitialPos(null);
     setFinalPos(null);
+    toggleGrabbing(false);
   };
 
   /* on stocke l'interval dans une ref pour y acceder dans les useEffect et a l'exterieur */
@@ -122,11 +152,14 @@ const Slider = ({ slides }) => {
         onMouseDown={dragStart}
         onMouseMove={handleMouseMove}
         onMouseUp={dragEnd}
+        onTouchStart={touchStart}
+        onTouchMove={touchMove}
+        onTouchEnd={touchEnd}
         ref={slidesContainer}
       >
         {slides &&
           slides.map((s) => (
-            <div className={styles.slide} key={s.id}>
+            <div className={styles.slide} key={s.id} style={{ cursor: `${isGrabbing ? "grabbing" : "grab"}` }}>
               <h2 dangerouslySetInnerHTML={{ __html: s.title }}></h2>
               <Image
                 src={getAssetURL(s.fimg.id)}
