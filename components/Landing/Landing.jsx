@@ -1,11 +1,11 @@
 import ScrollIcon from "../ScrollIcon/ScrollIcon";
 import styles from "./Landing.module.css";
-import Native from "../Native/Native";
+import Slider from "../Slider/Slider";
 
 const Landing = ({ slides }) => {
   return (
     <div className={styles.container}>
-      <Native slides={slides} />
+      <Slider slides={slides} />
       <ScrollIcon />
     </div>
   );

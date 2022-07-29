@@ -1,13 +1,11 @@
-import getAssetURL from "../../services/directus/getAssets";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "./Native.module.css";
-import { shimmer, toBase64 } from "../../services/utils";
-import { useCallback, useEffect, useRef, useState } from "react";
+import styles from "../styles/NativeSlider.module.css";
 
-const Native = ({ slides }) => {
+const NativeSlider = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentStyle, setCurrentStyle] = useState(null);
+
+  /* On déclare les constantes utiles au Slider */
+  const slideDuration = 3000;
 
   /* on stocke l'interval dans une ref pour y acceder dans les useEffect et a l'exterieur */
   const interval = useRef(null);
@@ -17,12 +15,13 @@ const Native = ({ slides }) => {
     if (currentSlide < slides.length) {
       interval.current = setTimeout(() => {
         setCurrentSlide(currentSlide + 1);
-      }, 3000);
+      }, slideDuration);
+      return () => clearTimeout(interval.current);
     } else {
       setCurrentSlide(0);
       interval.current = setTimeout(() => {
         setCurrentSlide(currentSlide + 1);
-      }, 3000);
+      }, slideDuration);
       return () => clearTimeout(interval.current);
     }
   };
@@ -32,12 +31,13 @@ const Native = ({ slides }) => {
     if (currentSlide < slides.length) {
       interval.current = setTimeout(() => {
         setCurrentSlide(currentSlide + 1);
-      }, 3000);
+      }, slideDuration);
+      return () => clearTimeout(interval.current);
     } else {
       setCurrentSlide(0);
       interval.current = setTimeout(() => {
         setCurrentSlide(currentSlide + 1);
-      }, 3000);
+      }, slideDuration);
       return () => clearTimeout(interval.current);
     }
   }, [currentSlide, slides.length]);
@@ -60,7 +60,6 @@ const Native = ({ slides }) => {
         break;
     }
   }, [currentSlide]);
-
   return (
     <div className={styles.container}>
       <div
@@ -72,19 +71,7 @@ const Native = ({ slides }) => {
         {slides &&
           slides.map((s) => (
             <div className={styles.slide} key={s.id}>
-              <Link href={s.url ? s.url : "/"}>
-                <a>
-                  <Image
-                    src={getAssetURL(s.fimg.id)}
-                    alt=""
-                    layout="fill"
-                    objectFit="cover"
-                    priority="true"
-                    placeholder="blur"
-                    blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-                  />
-                </a>
-              </Link>
+              {slides}
             </div>
           ))}
       </div>
@@ -94,7 +81,7 @@ const Native = ({ slides }) => {
             <div
               className={`${styles.dot} ${currentSlide === index ? styles.activeDot : ""}`}
               key={s.id}
-              onClick={() => handleClick(index)}
+              onClick={currentSlide === index ? null : () => handleClick(index)}
             ></div>
           ))}
       </div>
@@ -102,4 +89,4 @@ const Native = ({ slides }) => {
   );
 };
 
-export default Native;
+export default NativeSlider;

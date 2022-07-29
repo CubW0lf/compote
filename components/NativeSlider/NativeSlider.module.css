@@ -51,6 +51,7 @@
     height: 100%;
     border-radius: 50%;
     background-color: rgb(255 255 255 / 50%);
+    cursor: pointer;
 }
 
 .activeDot {
@@ -58,4 +59,33 @@
     height: 100%;
     border-radius: 50%;
     background-color: var(--body) !important;
+    cursor: default;
+}
+
+.slide:nth-child(1) .pote {
+
+    position: absolute;
+    left: 11vw;
+    bottom: -2vh;
+}
+
+.slide:nth-child(2) .pote {
+
+    position: absolute;
+    right: 4vw;
+    bottom: -4vh;
+}
+
+.slide:nth-child(3) .pote {
+
+    position: absolute;
+    left: 4vw;
+    bottom: -2vh;
+}
+
+
+.poteWrapper {
+    position: relative;
+    width: 31vw;
+    height: 31vw;
 }

@@ -1,0 +1,161 @@
+.container {
+    height: 75vh;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slides {
+    width: 300%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.slide h2 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    color: var(--body);
+    width: 90%;
+}
+
+.slide a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    position: relative;
+}
+
+.pagination {
+    width: 40vw;
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+    transform: translateX(-50%);
+    height: 10vw;
+    z-index: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dot {
+    width: 10vw;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--dark);
+    cursor: pointer;
+}
+
+.activeDot {
+    width: 10vw;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--body) !important;
+    cursor: default;
+}
+
+.slide:nth-child(1) .pote {
+
+    position: absolute;
+    left: 0;
+    bottom: -2vh;
+}
+
+.slide:nth-child(2) .pote {
+
+    position: absolute;
+    right: 4vw;
+    bottom: -4vh;
+}
+
+.slide:nth-child(3) .pote {
+
+    position: absolute;
+    left: -4vw;
+    bottom: -2vh;
+}
+
+
+.poteWrapper {
+    position: relative;
+    width: 31vh;
+    height: 31vh;
+}
+
+@media screen and (min-width:1200px) {
+    .pagination {
+        width: 5vw;
+        position: absolute;
+        left: 50%;
+        bottom: 2vh;
+        transform: translateX(-50%);
+        height: 1vw;
+        z-index: 6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dot {
+        width: 1vw;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgb(255 255 255 / 50%);
+        cursor: pointer;
+    }
+
+    .activeDot {
+        width: 1vw;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--body) !important;
+        cursor: default;
+    }
+
+    .slide:nth-child(1) .pote {
+
+        position: absolute;
+        left: 11vw;
+        bottom: -2vh;
+    }
+
+    .slide:nth-child(2) .pote {
+
+        position: absolute;
+        right: 4vw;
+        bottom: -4vh;
+    }
+
+    .slide:nth-child(3) .pote {
+
+        position: absolute;
+        left: 4vw;
+        bottom: -2vh;
+    }
+
+    .poteWrapper {
+        position: relative;
+        width: 31vw;
+        height: 31vw;
+    }
+}
