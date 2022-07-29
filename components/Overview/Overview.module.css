@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: var(--body);
 }
 
 .mockup {

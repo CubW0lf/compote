@@ -8,6 +8,8 @@
     background:
         conic-gradient(from 90deg at 2px 2px,
             var(--body) 90deg, rgb(221 230 229/ 30%) 0) -2px -2px/50px 50px;
+    background-color: var(--body);
+
 }
 
 .quote {

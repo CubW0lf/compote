@@ -1,13 +1,29 @@
-.reviews {
-    height: 60vh;
+.container {
+    position: relative;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vw;
+}
+
+.reviewsWrapper {
     width: 100%;
+    height: 60vh;
     padding: 5vw;
     position: relative;
+}
+
+.reviews {
+    margin: 0 auto;
+    height: 100%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--dark);
+    overflow: hidden;
 }
 
 .quote {
@@ -16,7 +32,7 @@
     position: relative;
 }
 
-.reviews h1 {
+.container h1 {
     position: relative;
     color: white;
     z-index: 4;
@@ -45,11 +61,13 @@
     background: #565d69;
     color: white;
     height: auto;
+    width: 100%;
     padding: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .percent ul {
@@ -86,12 +104,13 @@
 }
 
 .slider {
-    width: 100%;
+    width: 300%;
+    height: 100%;
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 1s;
 }
 
 .slide {
@@ -101,16 +120,41 @@
     position: relative;
 }
 
-.background {
+.pagination {
+    width: 7vw;
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+    transform: translateX(-50%);
+    height: 1vw;
+    z-index: 6;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-top: 5vh;
-    transition: all 1s;
+}
+
+.dot {
+    padding: 0;
+    margin: 0;
+    border-radius: 1vh;
+    height: 1vh;
+    width: 2vw;
+    background: var(--body);
     position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.activeDot {
+    padding: 0;
+    margin: 0;
+    border-radius: 1vh;
+    height: 1vh;
+    width: 2vw;
+    background: var(--primary);
+    position: relative;
+    display: block;
+    cursor: pointer;
 }
 
 .name {
@@ -124,7 +168,6 @@
 }
 
 .reviewText {
-    width: 60%;
     color: var(--body);
     text-align: center;
 }
@@ -169,7 +212,6 @@
 @media screen and (min-width:1200px) {
     .reviews {
         justify-content: center;
-        padding: 2vw;
     }
 
     .reviews h1 {

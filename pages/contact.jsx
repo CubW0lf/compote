@@ -1,8 +1,8 @@
 import styles from "../styles/Contact.module.css";
-import { useForm } from "react-hook-form";
 import { createItem, find } from "../services/directus/utils";
 import { useUxContext } from "../contexts/uxContext";
 import Flash from "../components/Flash/Flash";
+import { useForm } from "react-hook-form";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 const Modal = dynamic(() => import("../components/Modal/Modal"), { ssr: false });
@@ -27,7 +27,6 @@ const Contact = ({ policy }) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors, dirtyFields },
   } = useForm({ mode: "onChange" });
 

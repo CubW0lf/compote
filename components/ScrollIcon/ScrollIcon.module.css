@@ -1,10 +1,14 @@
 .container {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 15vh;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    z-index: 6;
 }
 
 .container a {
