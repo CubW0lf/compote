@@ -4,6 +4,7 @@ import pote from "../../public/assets/images/potes/pote_review.png";
 import Circle from "../UI/Circle/Circle";
 import quote from "../../public/assets/images/quote.png";
 import NativeSlider from "../UI/NativeSlider/NativeSlider";
+import Percent from "../Percent/Percent";
 
 const Reviews = ({ reviews }) => {
   return (
@@ -30,33 +31,7 @@ const Reviews = ({ reviews }) => {
           </div>
         </div>
       </div>
-      <div className={styles.percent}>
-        <ul>
-          <li>
-            <Circle deg={0} />
-            <span>de conseils</span>
-          </li>
-          <li>
-            <Circle deg={90} />
-            <span>de connaissances</span>
-          </li>
-          <li>
-            <Circle deg={180} />
-            <span>de communications</span>
-          </li>
-          <li>
-            <Circle deg={270} />
-            <span>d&apos;humain</span>
-          </li>
-        </ul>
-      </div>
-      <div className={styles.hundredContainer}>
-        <div className={styles.hundredCircle}></div>
-        <div className={styles.percentCircle}>
-          <span className="font">100%</span>
-          <span className="font">Com&apos; Pote</span>
-        </div>
-      </div>
+      <Percent />
     </div>
   );
 };

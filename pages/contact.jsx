@@ -1,13 +1,13 @@
 import styles from "../styles/Contact.module.css";
 import { createItem, find } from "../services/directus/utils";
 import { useUxContext } from "../contexts/uxContext";
-import Flash from "../components/Flash/Flash";
+import Flash from "../components/UI/Flash/Flash";
 import Head from "next/head";
 import { useForm } from "react-hook-form";
 import dynamic from "next/dynamic";
-const Modal = dynamic(() => import("../components/Modal/Modal"));
+const Modal = dynamic(() => import("../components/UI/Modal/Modal"));
 import { FaCircle } from "react-icons/fa";
-import Input from "../components/Input/Input";
+import Input from "../components/UI/Input/Input";
 import Image from "next/image";
 import pote from "../public/assets/images/potes/pote_facteur.png";
 import plane from "../public/assets/images/plane.png";

@@ -1,5 +1,5 @@
 .container {
-    height: 500px;
+    padding: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,15 +20,20 @@
 
 .container q {
     line-height: 1;
-    font-size: 6vw;
+    font-size: 8vw;
     text-align: center;
     font-weight: 200;
     font-style: italic;
 }
 
+.container q::before,
+.container q::after {
+    content: "";
+}
+
 .container cite {
     color: var(--primary);
-    font-size: 5vw;
+    font-size: 7vw;
     font-weight: 600;
     margin-bottom: 5vh;
 }
@@ -47,17 +52,18 @@
 }
 
 @media screen and (min-width:1200px) {
+
     .quote {
         width: 5vw;
         height: 5vw;
     }
 
     .container q {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .container cite {
-        font-size: 25px;
+        font-size: 5vw;
         margin-top: 25px;
         margin-bottom: 10vh;
     }

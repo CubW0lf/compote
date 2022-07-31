@@ -10,7 +10,6 @@
 .reviewsWrapper {
     padding: 5vw;
     width: 100%;
-    height: 60vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -53,45 +52,6 @@
 }
 
 
-.bg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    filter: grayscale(100%);
-    z-index: 1;
-}
-
-.percent {
-    background: #565d69;
-    color: white;
-    height: auto;
-    width: 100%;
-    padding: 5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.percent ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2vw;
-    width: 100%
-}
-
-.percent ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.percent ul li span {
-    font-size: 5vw;
-}
-
 .absolute {
     position: absolute;
     width: 30vw;
@@ -112,6 +72,10 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .name {
@@ -122,6 +86,7 @@
     padding: 1vw 2vw;
     transition: all 1s;
     font-size: 5vw;
+    margin-top: 2vh;
 }
 
 .reviewText {
@@ -133,46 +98,15 @@
     font-size: 4vw;
 }
 
-.hundredContainer {
-    width: 100%;
-    background: #565d69;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 25vw;
-}
 
-.hundredCircle {
-    border-radius: 50%;
-    width: 20vw;
-    height: 20vw;
-    border: 2vw solid var(--primary);
-    position: absolute;
-}
-
-.percentCircle {
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--body);
-}
-
-.percentCircle span {
-    font-size: 2vh;
-}
 
 @media screen and (min-width:1200px) {
     .reviews {
         justify-content: center;
     }
 
-    .reviews h1 {
-        font-size: 5vw;
+    .container h1 {
+        font-size: 7vw;
     }
 
     .name {
@@ -187,48 +121,10 @@
         font-size: 1.7vw;
     }
 
-    .background {
-        margin-top: 0;
-    }
-
     .pote {
         position: relative;
         width: 100%;
         height: 100%;
         margin-left: 0;
-    }
-
-    .percent {
-        padding: 2vw;
-    }
-
-    .percent ul {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 60%
-    }
-
-    .percent ul li span {
-        font-size: 1.7vw;
-    }
-
-    .hundredContainer {
-        height: 10vw;
-    }
-
-    .hundredCircle {
-        width: 7vw;
-        height: 7vw;
-        border: .5vw solid var(--primary);
-    }
-
-    .percentCircle {
-        width: 7vw;
-        height: 7vw;
-    }
-
-    .hundredContainer > span {
-        font-size: 2vw;
     }
 }

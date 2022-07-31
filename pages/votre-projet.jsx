@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { find, getAll } from "../services/directus/utils";
 import { shimmer, toBase64 } from "../services/utils";
-import ProjectTile from "../components/ProjectTile/ProjectTile";
+import ProjectTile from "../components/UI/ProjectTile/ProjectTile";
 import pote from "../public/assets/images/potes/pote_ordi.png";
 import observateur from "../public/assets/images/potes/pote_observateur.png";
 import cafe from "../public/assets/images/potes/pote_cafe.png";

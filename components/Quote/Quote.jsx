@@ -11,11 +11,12 @@ const Quote = () => {
         <Image src={quote} alt="" layout="fill" objectFit="contain" placeholder="blur" />
       </div>
       <q>
-        L&apos;oiseau matinal attrape le ver
+        Voir, c&apos;est savoir;
         <br />
-        mais la deuxième souris aura le fromage
+        vouloir,c&apos;est pouvoir ;<br />
+        oser, c&apos;est avoir.
       </q>
-      <cite>Proverbe Anglais</cite>
+      <cite>Alfred de Musset</cite>
 
       <Link href="/contact">
         <a>
