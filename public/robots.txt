@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://compote.me
+
+# Sitemaps
+Sitemap: https://compote.me/sitemap.xml

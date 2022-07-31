@@ -4,6 +4,7 @@ import Link from "next/link";
 import { find } from "../services/directus/utils";
 import moi from "../public/assets/images/moi.jpg";
 import styles from "../styles/About.module.css";
+import { shimmer, toBase64 } from "../services/utils";
 
 export async function getStaticProps() {
   const page = await find("page", 4);
@@ -28,7 +29,14 @@ const About = ({ page }) => {
         <main>
           <div className={styles.article_wrapper}>
             <aside className={styles.aside}>
-              <Image src={moi} alt="" layout="fill" objectPosition="top left" />
+              <Image
+                src={moi}
+                alt=""
+                layout="fill"
+                objectPosition="top left"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+              />
             </aside>
             <article className={styles.article}>
               {page && <h1>{page.title}</h1>}
@@ -36,7 +44,7 @@ const About = ({ page }) => {
               <div className={styles.cta}>
                 <Link href="/contact">
                   <a>
-                    <button>Apprenons à nous connaitre</button>
+                    <button className={styles.button}>Apprenons à nous connaitre</button>
                   </a>
                 </Link>
               </div>
