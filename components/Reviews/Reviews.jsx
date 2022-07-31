@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./Reviews.module.css";
 import pote from "../../public/assets/images/potes/pote_review.png";
-import Circle from "../UI/Circle/Circle";
 import quote from "../../public/assets/images/quote.png";
-import NativeSlider from "../UI/NativeSlider/NativeSlider";
+import dynamic from "next/dynamic";
+const NativeSlider = dynamic(() => import("../UI/NativeSlider/NativeSlider"));
 import Percent from "../Percent/Percent";
 
 const Reviews = ({ reviews }) => {

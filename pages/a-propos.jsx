@@ -18,12 +18,11 @@ const About = ({ page }) => {
   return (
     <>
       <Head>
-        <title>A propos | ComPote</title>
+        <title>A propos de l&apos;Agence | Com&apos; Pote</title>
         <meta
           name="description"
-          content="Qui se cache derrière le projet Com' Pote ? Pour en savoir plus nous vous présentons vincent notre créateur"
+          content="Qui se cache derrière le projet Com' Pote ? Pour en savoir plus nous vous présentons Vincent notre créateur"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
         <main>

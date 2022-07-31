@@ -19,12 +19,11 @@ const Tools = ({ tools, photo, video }) => {
   return (
     <>
       <Head>
-        <title>Materiel photo &amp; Vidéo et technologies Web | ComPote</title>
+        <title>Materiel photo &amp; Vidéo et technologies Web | Com&apos; Pote</title>
         <meta
           name="description"
           content="Pour mieux connaitre notre materiel, nos outils et technologies afin de mieux choisir votre stratégie"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
         <main>

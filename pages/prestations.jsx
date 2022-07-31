@@ -22,9 +22,11 @@ const Services = ({ web, photo, video }) => {
   return (
     <>
       <Head>
-        <title>Prestations en détail | ComPote</title>
-        <meta name="description" content="Nos prestations sur mesure. Web, Photo, Vidéo etc..." />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Développement de Site Web, Contenu rédactionnel et Média, Photo et vidéo | Com&apos; Pote</title>
+        <meta
+          name="description"
+          content="Nos prestations sur mesure. Du SEO stratégique aux technologies web en passant par la création de contenu photo et vidéo de qualité professionelle"
+        />
       </Head>
       <div className={styles.container}>
         <div className={styles.overview}>

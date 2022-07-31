@@ -24,12 +24,11 @@ const Project = ({ page, projects }) => {
   return (
     <>
       <Head>
-        <title>Votre Projet | ComPote</title>
+        <title>Votre Projet | Com&apos; Pote</title>
         <meta
           name="description"
-          content="Pour un projet qui vous ressemble au plus près de vos envies, avec nos solutions"
+          content="Pour un projet qui vous ressemble, Com' Pote vous apporte des conseils, une stratégie, et les outils nécessaire."
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
         <div className={styles.header}>
@@ -82,7 +81,7 @@ const Project = ({ page, projects }) => {
               </div>
             </div>
           </div>
-          <section className={styles.examples} id="exemples">
+          <article className={styles.examples} id="exemples">
             <h2>Quelques exemples de réalisations</h2>
             <div className={styles.grid}>
               {projects &&
@@ -99,7 +98,7 @@ const Project = ({ page, projects }) => {
                 <button>Voir les prestations sur mesure</button>
               </a>
             </Link>
-          </section>
+          </article>
           <div className={styles.spacer}>
             <div className={styles.observateur}>
               <div className={styles.wrapper}>

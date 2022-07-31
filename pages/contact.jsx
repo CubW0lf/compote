@@ -45,12 +45,11 @@ const Contact = ({ policy }) => {
   return (
     <>
       <Head>
-        <title>Formulaire de contact devis et questions | ComPote</title>
+        <title>Formulaire de contact devis et questions | Com&apos; Pote</title>
         <meta
           name="description"
           content="Formulaire de contact pour demander un devis, poser une question ou faire une remarque voire demander une collaboration"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
         <h1>
