@@ -63,4 +63,15 @@ li {
 #root,
 #__next {
     isolation: isolate;
+    padding-bottom: 10vh;
+    overflow-x: hidden;
+}
+
+@media screen and (min-width:1200px) {
+
+    #root,
+    #__next {
+        padding-top: 10vh;
+        padding-bottom: 0;
+    }
 }

@@ -22,7 +22,7 @@ const About = ({ page }) => {
         <title>A propos de l&apos;Agence | Com&apos; Pote</title>
         <meta
           name="description"
-          content="Qui se cache derrière le projet Com' Pote ? Pour en savoir plus nous vous présentons Vincent notre créateur"
+          content="Qui se cache derrière le projet Com' Pote ? Pour en savoir plus nous vous présentons Vincent."
         />
       </Head>
       <div className={styles.container}>

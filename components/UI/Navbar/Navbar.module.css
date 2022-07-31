@@ -10,6 +10,7 @@
     background-color: var(--body);
     box-shadow: 0 0 5px var(--info);
     z-index: 9999;
+    bottom: 0;
 }
 
 .container ul {
@@ -31,5 +32,7 @@
 @media screen and (min-width:1200px) {
     .container {
         padding: 0 2vw;
+        top: 0;
+        bottom: auto;
     }
 }

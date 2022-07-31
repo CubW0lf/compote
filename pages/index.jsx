@@ -27,7 +27,7 @@ export default function Home({ slides, overview, reviews }) {
         <title>Agence Web &amp; Media à Reims | Com&apos; Pote</title>
         <meta
           name="description"
-          content="Com' Pote c'est votre assistant communication tout en un. Développement Web, SEO, DevOps, contenu rédactionnel, photo et vidéo."
+          content="Com' Pote votre assistant communication tout en un. Développement Web, SEO, DevOps, contenu rédactionnel, photo et vidéo."
         />
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui"></meta>
       </Head>

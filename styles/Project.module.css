@@ -2,25 +2,30 @@
     height: auto;
     width: 100%;
     position: relative;
-    background:
-        conic-gradient(from 90deg at 2px 2px,
-            rgb(221 230 229/ 30%) 90deg, var(--body) 0) -2px -2px/30px 30px;
-    padding: 1vw 5vw;
+    background-color: var(--primary);
+    padding: 5vh;
 }
 
 .header h1 {
     position: relative;
     z-index: 5;
     width: 100%;
+    color: var(--body);
+    margin-bottom: 25vw;
+}
+
+.videoWrapper {
+    width: calc(100vw - 10vh);
+    height: 50vw;
+    position: relative;
 }
 
 .video {
-    width: 90vw;
-    height: 50vw;
-    color: var(--body);
+    width: 100%;
+    height: 100%;
     border: 1vw solid var(--body);
-    position: relative;
-    margin: 25vw auto 0 auto;
+    position: absolute;
+    z-index: 3;
 }
 
 .pote {
@@ -28,8 +33,9 @@
     height: 30vw;
     position: absolute;
     left: 50%;
-    top: 37%;
-    transform: translate(-50%, -50%);
+    top: -25vw;
+    z-index: 2;
+    transform: translateX(-50%);
 }
 
 .article_wrapper {
@@ -43,7 +49,7 @@
 
 .article {
     width: 100%;
-    padding: 2vh 5vw;
+    padding: 5vh 5vw;
 }
 
 .article h2 {
@@ -59,7 +65,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 2vw 0;
+    padding: 5vh 0 10vh 0;
 }
 
 .cta span {
@@ -72,14 +78,18 @@
 .cafe {
     position: absolute;
     bottom: 0;
-    right: 0;
-    transform: translateY(-5vw);
+    left: 50%;
+    transform: translate(-50%, 2vh);
 }
 
 .wrapper {
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 30vw;
+    height: 30vw;
+}
+
+.wrapper img {
+    object-position: center center !important;
 }
 
 .examples {
@@ -89,17 +99,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5vw;
+    padding: 5vh 5vw 10vh 5vw;
     position: relative;
 }
 
-.examples h2 {
+.examples > h2 {
     color: var(--body);
+    letter-spacing: 1px;
+    font-size: 10vw;
+    line-height: 1;
+    font-family: var(--titleFont);
+    font-weight: 200;
+    font-style: italic;
+    text-transform: none;
+    text-align: center;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 40vw);
+    grid-template-columns: repeat(auto-fill, 100%);
     justify-content: center;
     gap: 2vw;
     width: 100%;
@@ -115,15 +133,22 @@
 
 .spacer {
     position: relative;
-    height: 20vh;
+    height: 30vh;
     pointer-events: none;
 }
 
 .observateur {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 40%);
+    bottom: 0;
+    transform: translate(-50%, 10%);
     z-index: 1;
+}
+
+.ObservateurWrapper {
+    width: 40vw;
+    height: 40vw;
+    position: relative;
 }
 
 @media screen and (min-width:1200px) {
@@ -139,31 +164,54 @@
     .header h1 {
         font-size: 5vw;
         margin: 0 auto;
-        width: 50%;
+        text-align: center;
+        margin-top: 2vh;
     }
 
-    .video {
-        width: 50vw;
-        height: 25vw;
-        left: 50%;
-        bottom: 0;
-        transform: translate(-50%, 50%);
+    .videoWrapper {
+        width: 960px;
+        height: 540px;
         position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
     }
 
     .pote {
-        left: 12%;
-        top: 100%;
-        height: 60%;
-        transform: translate(-50%, -90%);
+        width: 20vw;
+        height: 20vw;
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        z-index: 2;
+        transform: translate(-100%, -70%);
     }
 
     .container main {
-        margin: 200px auto;
+        margin: 270px auto 0 auto;
     }
 
     .article {
-        width: 50%;
+        width: calc(960px - 2vw);
+        padding: 5vh 0;
+    }
+
+    .cafe {
+        position: absolute;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        transform: translate(0, -5vh);
+    }
+
+    .wrapper {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .wrapper img {
+        object-position: right !important;
     }
 
     .examples {
@@ -177,7 +225,21 @@
         position: relative;
     }
 
+    .examples > h2 {
+        font-size: 70px;
+    }
+
     .grid {
         grid-template-columns: repeat(auto-fill, 20vw);
+    }
+
+    .spacer {
+        height: 400px;
+    }
+
+    .ObservateurWrapper {
+        width: 20vw;
+        height: 20vw;
+        position: relative;
     }
 }

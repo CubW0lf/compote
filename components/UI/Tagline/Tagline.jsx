@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/assets/images/logo_light.png";
 import styles from "./Tagline.module.css";
+import LogoCircle from "../../../public/assets/images/svg/logoCircle";
+import LogoAlt from "../../../public/assets/images/svg/logo_alt";
 
 const Tagline = () => {
   return (
@@ -10,7 +10,8 @@ const Tagline = () => {
       <Link href="/">
         <a>
           <div className={styles.logo}>
-            <Image src={logo} alt="Logo de ComPote" layout="responsive" priority="true" placeholder="blur" />
+            <LogoCircle />
+            <LogoAlt />
           </div>
         </a>
       </Link>

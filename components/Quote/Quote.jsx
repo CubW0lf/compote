@@ -1,6 +1,6 @@
 import styles from "./Quote.module.css";
 import intello from "../../public/assets/images/potes/pote_intello.png";
-import quote from "../../public/assets/images/quote.png";
+import QuoteSvg from "../../public/assets/images/svg/quote";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ const Quote = () => {
   return (
     <div className={styles.container}>
       <div className={styles.quote}>
-        <Image src={quote} alt="" layout="fill" objectFit="contain" placeholder="blur" />
+        <QuoteSvg />
       </div>
       <q>
         Voir, c&apos;est savoir;
@@ -26,7 +26,14 @@ const Quote = () => {
 
       <div className={styles.intello}>
         <div className={styles.wrapper}>
-          <Image src={intello} alt="Pote intello" layout="fill" objectFit="contain" placeholder="blur" />
+          <Image
+            src={intello}
+            alt="Pote intello"
+            layout="fill"
+            objectFit="contain"
+            objectPosition="right"
+            placeholder="blur"
+          />
         </div>
       </div>
     </div>

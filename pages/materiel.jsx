@@ -22,7 +22,7 @@ const Tools = ({ tools, photo, video }) => {
         <title>Materiel photo &amp; Vidéo et technologies Web | Com&apos; Pote</title>
         <meta
           name="description"
-          content="Pour mieux connaitre notre materiel, nos outils et technologies afin de mieux choisir votre stratégie"
+          content="Présentation de notre materiel de qualité profesionnelle et des technologies web que nous utilisons pour s'adapter au mieux à vos projets."
         />
       </Head>
       <div className={styles.container}>

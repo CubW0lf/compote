@@ -4,26 +4,7 @@
 }
 
 .percent {
-    color: white;
-    padding: 5vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2vw;
-    width: 100%
-}
-
-.percent li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.percent li span {
-    font-size: 6vw;
-    font-weight: 300;
-    letter-spacing: 2px;
-    font-style: normal;
+    display: none;
 }
 
 .hundredContainer {
@@ -32,14 +13,14 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 5vw;
+    padding: 5vh;
 }
 
 .hundredCircle {
     border-radius: 50%;
     width: 50vw;
     height: 50vw;
-    border: 5vw solid var(--primary);
+    border: 3vw solid var(--primary);
 }
 
 .hundredText {
@@ -62,10 +43,19 @@
 
 @media screen and (min-width:1200px) {
     .percent {
+        color: white;
         width: 70%;
         margin: auto;
-        padding: 2vw;
+        padding: 5vh;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .percent li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .percent li span {
@@ -75,13 +65,7 @@
         font-style: normal;
     }
 
-    .hundredCircle {
-        width: 25vw;
-        height: 25vw;
-        border-width: 2vw;
-    }
-
-    .hundredText span {
-        font-size: 4vw;
+    .hundredContainer {
+        display: none;
     }
 }

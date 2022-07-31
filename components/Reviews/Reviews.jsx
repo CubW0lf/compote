@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Reviews.module.css";
 import pote from "../../public/assets/images/potes/pote_review.png";
-import quote from "../../public/assets/images/quote.png";
+import QuoteSvg from "../../public/assets/images/svg/quote";
 import dynamic from "next/dynamic";
 const NativeSlider = dynamic(() => import("../UI/NativeSlider/NativeSlider"));
 import Percent from "../Percent/Percent";
@@ -11,7 +11,7 @@ const Reviews = ({ reviews }) => {
     <div className={styles.container}>
       <div className={styles.reviewsWrapper}>
         <div className={styles.quote}>
-          <Image src={quote} alt="" layout="fill" objectFit="contain" />
+          <QuoteSvg />
         </div>
         <h1>Les avis de nos clients</h1>
         <div className={styles.reviews}>

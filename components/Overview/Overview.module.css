@@ -5,6 +5,7 @@
     align-items: center;
     position: relative;
     background-color: var(--body);
+    padding: 10vh 0 0 0;
 }
 
 .mockup {
@@ -16,11 +17,11 @@
 
 .mockup img {
     object-fit: cover !important;
-    object-position: top right;
+    object-position: bottom right;
 }
 
 .text {
-    padding: 2vw 5vw;
+    padding: 5vh 5vw;
     width: 100%;
     height: auto;
     position: relative;

@@ -27,30 +27,28 @@ const Project = ({ page, projects }) => {
         <title>Votre Projet | Com&apos; Pote</title>
         <meta
           name="description"
-          content="Pour un projet qui vous ressemble, Com' Pote vous apporte des conseils, une stratégie, et les outils nécessaire."
+          content="Pour un projet digital qui vous ressemble, Com' Pote vous apporte des conseils, une stratégie, et les outils nécessaire."
         />
       </Head>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>
-            Votre projet,
-            <br />
-            et si on en discutait ?
-          </h1>
-          <div className={`${styles.pote}`}>
-            <Image src={pote} alt="Petit Pote avec son ordi" layout="fill" objectFit="contain" placeholder="blur" />
-          </div>
-          <div className={styles.video}>
-            <iframe
-              width="560"
-              height="315"
-              style={{ width: "100%", height: "100%" }}
-              src="https://www.youtube.com/embed/I4hCp5ZETb8"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen={true}
-            ></iframe>
+          <h1>Votre projet, et si on en discutait ?</h1>
+          <div className={styles.videoWrapper}>
+            <div className={`${styles.pote}`}>
+              <Image src={pote} alt="Petit Pote avec son ordi" layout="fill" objectFit="contain" placeholder="blur" />
+            </div>
+            <div className={styles.video}>
+              <iframe
+                width="560"
+                height="315"
+                style={{ width: "100%", height: "100%" }}
+                src="https://www.youtube.com/embed/I4hCp5ZETb8"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen={true}
+              ></iframe>
+            </div>
           </div>
         </div>
 
@@ -101,7 +99,7 @@ const Project = ({ page, projects }) => {
           </article>
           <div className={styles.spacer}>
             <div className={styles.observateur}>
-              <div className={styles.wrapper}>
+              <div className={styles.ObservateurWrapper}>
                 <Image
                   src={observateur}
                   alt="Pote observateur"

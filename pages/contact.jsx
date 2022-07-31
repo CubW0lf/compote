@@ -48,7 +48,7 @@ const Contact = ({ policy }) => {
         <title>Formulaire de contact devis et questions | Com&apos; Pote</title>
         <meta
           name="description"
-          content="Formulaire de contact pour demander un devis, poser une question ou faire une remarque voire demander une collaboration"
+          content="Formulaire de contact pour demander un devis, poser une question, proposer une collaboration ou plus simplement échanger sur votre projet."
         />
       </Head>
       <div className={styles.container}>

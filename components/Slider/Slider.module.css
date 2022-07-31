@@ -1,5 +1,5 @@
 .container {
-    height: 75vh;
+    height: 90vh;
 }
 
 .slide {
@@ -51,14 +51,16 @@
     bottom: -2vh;
 }
 
-
 .poteWrapper {
     position: relative;
-    width: 31vh;
-    height: 31vh;
+    width: 40vh;
+    height: 40vh;
 }
 
 @media screen and (min-width:1200px) {
+    .container {
+        height: 80vh;
+    }
 
     .slide:nth-child(1) .pote {
 

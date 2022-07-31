@@ -22,12 +22,12 @@
 
 .infos {
     width: 100%;
-    padding: 5vw 2vw 5vw 2vw;
+    padding: 5vh 5vw;
 }
 
 .tags {
     margin-top: 1vh;
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -47,7 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
+    margin-top: 5vh;
 }
 
 .button svg {
@@ -67,9 +67,11 @@
 .wrapper {
     position: relative;
     width: 50%;
+    transition: all .4s;
 }
 
 .wrapper img:hover {
+    transition: all .4s;
     transform: scale(1.2);
 }
 

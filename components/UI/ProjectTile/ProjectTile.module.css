@@ -1,9 +1,9 @@
 .container {
     position: relative;
-    width: 40vw;
-    height: 40vw;
+    height: 80vw;
     overflow: hidden;
     cursor: pointer;
+    padding: 5vh;
 }
 
 .blind {
@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     transition: all .4s;
+    padding: 5vh;
 }
 
 .blind h2 {
@@ -43,6 +44,9 @@
     }
 
     .blind h2 {
-        font-size: 30px;
+        font-size: 1.5vw;
+        color: var(--body);
+        font-weight: 400;
+        font-style: italic;
     }
 }

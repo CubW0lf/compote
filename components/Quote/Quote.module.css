@@ -1,5 +1,5 @@
 .container {
-    padding: 5vw;
+    padding: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,10 +9,9 @@
         conic-gradient(from 90deg at 2px 2px,
             var(--body) 90deg, rgb(221 230 229/ 30%) 0) -2px -2px/50px 50px;
     background-color: var(--body);
-
 }
 
-.quote {
+.quote svg {
     width: 15vw;
     height: 15vw;
     position: relative;
@@ -33,38 +32,58 @@
 
 .container cite {
     color: var(--primary);
-    font-size: 7vw;
-    font-weight: 600;
+    font-size: 6vw;
+    font-weight: 500;
+    margin-top: 1vh;
     margin-bottom: 5vh;
+}
+
+.container cite::before,
+.container cite::after {
+    content: "\2014";
+    color: var(--primary);
 }
 
 .intello {
     position: absolute;
     right: 0;
     top: 0;
-    transform: translate(0, -50%);
+    transform: translate(5vw, -50%);
 }
 
 .wrapper {
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 40vw;
+    height: 40vw;
 }
 
 @media screen and (min-width:1200px) {
 
-    .quote {
+    .quote svg {
         width: 5vw;
         height: 5vw;
     }
 
     .container q {
-        font-size: 5vw;
+        font-size: 70px;
     }
 
     .container cite {
-        font-size: 5vw;
-        margin-top: 25px;
-        margin-bottom: 10vh;
+        font-size: 2.5vw;
+        margin-top: 1vh;
+        margin-bottom: 5vh;
+    }
+
+    .intello {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(-5vw, -50%);
+    }
+
+    .wrapper {
+        position: relative;
+        width: 20vw;
+        height: 20vw;
     }
 }

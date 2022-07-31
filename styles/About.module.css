@@ -20,7 +20,11 @@
 }
 
 .article {
-    padding: 5vw;
+    padding: 5vh 5vw;
+}
+
+.cta {
+    padding: 5vh 0;
 }
 
 @media screen and (min-width:1200px) {

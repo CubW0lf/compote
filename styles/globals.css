@@ -34,13 +34,13 @@ li {
 
 p {
   font-size: 5vw;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 strong {
   font-family: var(--font);
   color: var(--text);
-  font-weight: 600;
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -172,6 +172,7 @@ input:-internal-autofill-selected {
   p {
     font-size: 20px;
     margin-bottom: 2vh;
+    line-height: 1.5;
   }
 
   ol li {
