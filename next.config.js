@@ -8,6 +8,11 @@ const nextConfig = {
   publicRuntimeConfig: {
     url: process.env.DIRECTUS_URL,
   },
+  async rewrites() {
+    return {
+      afterFiles: [{ source: "/:path*", destination: "/_404/:path*" }],
+    };
+  },
 };
 
 module.exports = nextConfig;

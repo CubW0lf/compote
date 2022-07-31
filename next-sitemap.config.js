@@ -2,7 +2,7 @@
 const config = {
   siteUrl: "https://compote.me",
   generateRobotsTxt: true, // (optional)
-  // ...other options
+  // ...other optionssudo
 };
 
 module.exports = config;
