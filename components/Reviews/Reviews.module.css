@@ -5,20 +5,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5vw;
 }
 
 .reviewsWrapper {
+    padding: 5vw;
     width: 100%;
     height: 60vh;
-    padding: 5vw;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .reviews {
     margin: 0 auto;
-    height: 100%;
-    width: 60%;
+    height: 40vh;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -36,6 +39,7 @@
     position: relative;
     color: white;
     z-index: 4;
+    line-height: 1;
     font-size: 10vw;
 }
 
@@ -103,58 +107,11 @@
     margin-left: -10%;
 }
 
-.slider {
-    width: 300%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s;
-}
-
 .slide {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
-}
-
-.pagination {
-    width: 7vw;
-    position: absolute;
-    left: 50%;
-    bottom: 2vh;
-    transform: translateX(-50%);
-    height: 1vw;
-    z-index: 6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.dot {
-    padding: 0;
-    margin: 0;
-    border-radius: 1vh;
-    height: 1vh;
-    width: 2vw;
-    background: var(--body);
-    position: relative;
-    display: block;
-    cursor: pointer;
-}
-
-.activeDot {
-    padding: 0;
-    margin: 0;
-    border-radius: 1vh;
-    height: 1vh;
-    width: 2vw;
-    background: var(--primary);
-    position: relative;
-    display: block;
-    cursor: pointer;
 }
 
 .name {

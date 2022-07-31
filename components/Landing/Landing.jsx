@@ -1,4 +1,4 @@
-import ScrollIcon from "../ScrollIcon/ScrollIcon";
+import ScrollIcon from "../UI/ScrollIcon/ScrollIcon";
 import styles from "./Landing.module.css";
 import Slider from "../Slider/Slider";
 

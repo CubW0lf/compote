@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css";
 import ToggleMenuIcon from "../ToggleMenuIcon/ToggleMenuIcon";
 import { useEffect, useState } from "react";
-import { getAll } from "../../services/directus/utils";
+import { getAll } from "../../../services/directus/utils";
 import Tagline from "../Tagline/Tagline";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import getAssetURL from "../../services/directus/getAssets";
-import { shimmer, toBase64 } from "../../services/utils";
+import getAssetURL from "../../../services/directus/getAssets";
+import { shimmer, toBase64 } from "../../../services/utils";
 import styles from "./ProjectTile.module.css";
 
 const ProjectTile = ({ project }) => {

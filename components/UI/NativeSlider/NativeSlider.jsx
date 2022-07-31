@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import useSlider from "../../hooks/useSlider";
+import useSlider from "../../../hooks/useSlider";
 import styles from "./NativeSlider.module.css";
 
-const NativeSlider = ({ children, slides }) => {
+const NativeSlider = ({ children, slides, duration = 3000 }) => {
   const {
     dragStart,
     handleMouseMove,
@@ -19,12 +19,14 @@ const NativeSlider = ({ children, slides }) => {
     isGrabbing,
     setSlides,
     toggleAutoPlay,
+    setSlideDuration,
   } = useSlider();
 
   useEffect(() => {
     setSlides(slides);
     toggleAutoPlay(true);
-  }, [setSlides, slides, toggleAutoPlay]);
+    setSlideDuration(duration);
+  }, [setSlides, slides, toggleAutoPlay, setSlideDuration, duration]);
 
   return (
     <div className={styles.container} style={{ cursor: `${isGrabbing ? "grabbing" : "grab"}` }}>

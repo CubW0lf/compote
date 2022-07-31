@@ -1,6 +1,6 @@
 import { Dialog } from "@headlessui/react";
 import { useRef } from "react";
-import { useUxContext } from "../../contexts/uxContext";
+import { useUxContext } from "../../../contexts/uxContext";
 import styles from "./Modal.module.css";
 
 const Modal = ({ content }) => {

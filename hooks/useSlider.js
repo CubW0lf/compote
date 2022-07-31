@@ -10,7 +10,7 @@ const useSlider = () => {
 
   /* State du Slider */
   const [slides, setSlides] = useState([]);
-  const [slideDuration, setSlideDuration] = useState(3000);
+  const [slideDuration, setSlideDuration] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentStyle, setCurrentStyle] = useState(null);
   const [autoPlay, toggleAutoPlay] = useState(false);

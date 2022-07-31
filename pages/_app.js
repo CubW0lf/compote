@@ -1,4 +1,4 @@
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/UI/Layout/Layout";
 import { UxWrapper } from "../contexts/uxContext";
 import "../styles/reset.css";
 import "../styles/globals.css";

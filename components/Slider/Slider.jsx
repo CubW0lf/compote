@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Slider.module.css";
 import { shimmer, toBase64 } from "../../services/utils";
-import NativeSlider from "../NativeSlider/NativeSlider";
+import NativeSlider from "../UI/NativeSlider/NativeSlider";
 
 const Slider = ({ slides }) => {
   return (

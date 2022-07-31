@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { find, getAll } from "../../services/directus/utils";
+import { find, getAll } from "../../../services/directus/utils";
 import styles from "./Footer.module.css";
 import { IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { BsTelephoneFill } from "react-icons/bs";
