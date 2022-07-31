@@ -33,7 +33,7 @@ const ProjectSingle = ({ projet }) => {
   return (
     <>
       <Head>
-        <title>{projet.name} | Com&apos; Pote</title>
+        <title>{projet && projet.name} | Com&apos; Pote</title>
       </Head>
       <article className={styles.container}>
         {projet && (
