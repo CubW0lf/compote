@@ -20,12 +20,9 @@
 }
 
 .slide a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
+    display: block;
     transition: all 1s;
     position: relative;
 }

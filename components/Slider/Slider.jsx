@@ -21,9 +21,22 @@ const Slider = ({ slides }) => {
               <Image
                 src={getAssetURL(s.fimg.id)}
                 alt=""
+                className="not-mobile"
                 layout="fill"
                 objectFit="cover"
                 priority="true"
+                quality="100"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+              />
+              <Image
+                src={getAssetURL(s.fimg_mobile.id)}
+                alt=""
+                className="mobile"
+                layout="fill"
+                objectFit="cover"
+                priority="true"
+                quality="100"
                 placeholder="blur"
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
               />

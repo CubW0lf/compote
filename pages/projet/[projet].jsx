@@ -55,7 +55,7 @@ const ProjectSingle = ({ projet }) => {
                 {projet.description && (
                   <div className={styles.description} dangerouslySetInnerHTML={{ __html: projet.description }}></div>
                 )}
-                <a href={projet.url}>
+                <a href={projet.url} target="_BLANK" rel="noreferrer">
                   <button className={styles.button}>
                     Voir le site <MdLanguage />
                   </button>

@@ -5,8 +5,7 @@
 }
 
 .left {
-    height: 45vh;
-    padding: 5vw;
+    padding: 5vh 5vw;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -15,22 +14,15 @@
     position: relative;
 }
 
-.right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background:
-        conic-gradient(from 90deg at 2px 2px,
-            rgb(221 230 229/ 70%) 90deg, var(--body) 0) -2px -2px/30px 30px;
-    height: 80vh;
-    position: relative;
+.left h1 {
+    text-align: center;
 }
 
 .iframe {
     position: relative;
+    margin-top: 5vh;
     width: 100%;
-    height: 25vh;
+    height: 50vw;
     left: 0;
     z-index: 4;
 }
@@ -38,7 +30,7 @@
 .absolute {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -10%;
     width: 70%;
     height: 70%;
 }
@@ -121,16 +113,32 @@
 
     .left {
         height: 90vh;
-        padding: 5vw 0 0 5vw;
+        padding: 5vh 0 0 5vw;
+        display: block;
+    }
+
+    .left h1 {
+        letter-spacing: 0;
+        text-align: left;
     }
 
     .iframe {
-        position: absolute;
+        position: relative;
         width: 110%;
-        height: 50%;
-        left: 5vw;
-        top: 15vw;
+        height: 27vw;
         z-index: 4;
+        border: 1vw solid var(--body);
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: var(--primary);
+        height: 80vh;
+        position: relative;
+        border-bottom-left-radius: 50px;
     }
 
     .lists {

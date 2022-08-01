@@ -20,7 +20,7 @@ const Quote = () => {
 
       <Link href="/contact">
         <a>
-          <button>Et si on travaillait ensemble ?</button>
+          <button>Et si on osait ensemble ?</button>
         </a>
       </Link>
 
